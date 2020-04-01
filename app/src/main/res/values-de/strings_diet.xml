@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">Ihre Ernährung(en)</string>
+    <string name="diet_name">Name der Ernährung</string>
+    <string name="diets_dialog_warning_title">Warnhinweis</string>
+    <string name="warning_diets_data">Ihre Ernährungsdaten bleiben auf Ihrem Gerät gespeichert. Es wird nirgendwo etwas hochgeladen.</string>
+    <string name="edit_diet_name">Name</string>
+    <string name="edit_diet_description">Beschreibung</string>
+    <string name="edit_diet_enabled_disabled">Aktiviert/Deaktiviert</string>
+    <string name="edit_diet_authorised_ingredients">Zugelassene Inhaltsstoffe</string>
+    <string name="edit_diet_hint_ingredient_authorised">Listet die zugelassenen Inhaltsstoffe auf, die grün dargestellt werden sollen. Beispiel: Apfel, Pilze, Tomate … Sie können diese Liste später ergänzen.</string>
+    <string name="edit_diet_so_so_ingredients">So auch die Inhaltsstoffe</string>
+    <string name="edit_diet_hint_so_so_ingredient">Listet die problematischen Inhaltsstoffe auf, die in Orange angezeigt werden sollen. Beispiel: Ei, Fisch … Sie können diese Liste später ergänzen.</string>
+    <string name="edit_diet_unauthorised_ingredients">Nicht zugelassene Inhaltsstoffe</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">Listet die nicht zugelassenen Zutaten auf, die rot angezeigt werden sollen. Beispiel: Gluten, Milch, Palmöl, Zucker … Sie können diese Liste später ergänzen.</string>
+    <!-- End of used for diets AddOn -->
+</resources>

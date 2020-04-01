@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">Twoje diety</string>
+    <string name="diet_name">Nazwa diety</string>
+    <string name="diets_dialog_warning_title">Ostrzeżenie</string>
+    <string name="warning_diets_data">Dane dotyczące twoich diet pozostaną na twoim urządzeniu. Nic nie zostanie przesłane nigdzie indziej.</string>
+    <string name="edit_diet_name">Nazwa</string>
+    <string name="edit_diet_description">Opis</string>
+    <string name="edit_diet_enabled_disabled">Aktywne i nieaktywne</string>
+    <string name="edit_diet_authorised_ingredients">Zatwierdzone składniki</string>
+    <string name="edit_diet_hint_ingredient_authorised">Lista dopuszczonych składników, które powinny zostać wyświetlone w kolorze zielonym. Przykład: jabłka, pieczarki, pomidory... Tę listę można uzupełnić później.</string>
+    <string name="edit_diet_so_so_ingredients">Takie składniki jak</string>
+    <string name="edit_diet_hint_so_so_ingredient">Lista kłopotliwych składników, które powinny zostać wyświetlone w kolorze pomarańczowym. Przykład : jajka, ryby.... Tę listę można uzupełnić później.</string>
+    <string name="edit_diet_unauthorised_ingredients">Niezatwierdzone składniki</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">Lista nieautoryzowanych składników, które powinny zostać wyświetlone w kolorze czerwonym. Przykład: gluten, mleko, olej palmowy, cukier ... Listę można uzupełnić później.</string>
+    <!-- End of used for diets AddOn -->
+</resources>

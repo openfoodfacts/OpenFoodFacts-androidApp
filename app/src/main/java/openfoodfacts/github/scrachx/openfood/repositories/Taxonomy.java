@@ -34,6 +34,9 @@ public enum Taxonomy {
     INGREDIENT(ProductApiService.INGREDIENTS_JSON) {
         @Override
         public Single<List<Ingredient>> load(ProductRepository repository, long lastModifiedDate) {
+            //Because Ingredients can came from Product, we need to truncate the table before re-fill it.
+            //Table dietIngredients is a case of use.
+            repository.deleteIngredientCascade();
             return repository.loadIngredients(lastModifiedDate);
         }
     },

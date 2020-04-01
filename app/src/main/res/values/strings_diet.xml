@@ -1,0 +1,33 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">Your diet(s)</string>
+    <string name="diet_name">Diet name</string>
+    <string name="diets_dialog_warning_title">Warning</string>
+    <string name="warning_diets_data">Your diet(s) data stays on your device. Nothing will be uploaded anywhere.</string>
+    <string name="edit_diet_name">Name</string>
+    <string name="edit_diet_description">Description</string>
+    <string name="edit_diet_enabled_disabled">Enabled/Disabled</string>
+    <string name="edit_diet_authorised_ingredients">Authorized ingredients</string>
+    <string name="edit_diet_hint_ingredient_authorised">List the authorized ingredients that should appear in green. Example : apple, mushroom, tomato… You can complete this list later.</string>
+    <string name="edit_diet_so_so_ingredients">So so ingredients</string>
+    <string name="edit_diet_hint_so_so_ingredient">List the problematic ingredients that should appear in orange. Example : egg, fish… You can complete this list later.</string>
+    <string name="edit_diet_unauthorised_ingredients">Unauthorized ingredients</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">List the unauthorized ingredients that should appear in red. Example : gluten, milk, palm oil, sugar... You can complete this list later.</string>
+    <string name="diet_export_1">To have this new diet in Open Food Facts, thanks to open OFF App, goto to menu</string>
+    <string name="diet_export_2">Click on the Add a diet button\nThen copy/paste theses informations in the corresponding fields :</string>
+    <string name="diet_export_3">Click on</string>
+    <string name="add_a_diet">Add a diet</string>
+    <string name="edit_diet_hint_name_of_the_diet">An explicit name for your diet is required</string>
+    <string name="edit_diet_toast_name_of_the_diet">Please enter an explicit name for your diet !</string>
+    <string name="edit_diet_hint_description_of_the_diet">A optionaly description of for your diet</string>
+    <string name="warning_diets_taxonomy">However, for a better experience, you will automatically download the ingredients taxonomy when you\'ll add your first diet.</string>
+    <string name="warning_diets_online">So please, be sure you are online before your first click on the \"Add a diet\" button !</string>
+    <string name="warning_one_diet_1">Now you have created a diet you can see its effects by scanning a product (a traffic light appear in case of problem) and consult its ingredients.</string>
+    <string name="warning_one_diet_2">You may click on this ingredients list to complete your diet.</string>
+    <string name="warning_one_diet_3">You may also add some other diets and enabled/disabled them.</string>
+    <string name="edit_diet_remove">Remove this diet.</string>
+    <string name="title_remove_diet_dialog">Remove</string>
+    <string name="text_remove_diet_dialog">Do you want to remove the diet and all its relations?</string>
+    <string name="ingredients_loading">Initial ingredients loading</string>
+    <!-- End of used for diets AddOn -->
+</resources>

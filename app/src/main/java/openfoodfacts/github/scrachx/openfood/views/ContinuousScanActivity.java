@@ -125,6 +125,8 @@ public class ContinuousScanActivity extends androidx.appcompat.app.AppCompatActi
     TextView name;
     @BindView(R.id.quickView_additives)
     TextView additives;
+    @BindView(R.id.quickView_dietState)
+    ImageView dietState;
     @BindView(R.id.quickView_nutriScore)
     ImageView nutriScore;
     @BindView(R.id.quickView_novaGroup)
@@ -318,6 +320,10 @@ public class ContinuousScanActivity extends androidx.appcompat.app.AppCompatActi
                             productImage.setImageResource(R.drawable.placeholder_thumb);
                             imageProgress.setVisibility(GONE);
                         }
+                        //Hide dietState from quickView if app flavour is not OFF
+                        if (! BuildConfig.FLAVOR.equals("off")) {
+                            dietState.setVisibility(GONE);
+                        }
                         // Hide nutriScore from quickView if app flavour is not OFF or there is no nutriscore
                         if (BuildConfig.FLAVOR.equals("off") && product.getNutritionGradeFr() != null) {
                             if (Utils.getImageGrade(product.getNutritionGradeFr()) != Utils.NO_DRAWABLE_RESOURCE) {
@@ -337,7 +343,7 @@ public class ContinuousScanActivity extends androidx.appcompat.app.AppCompatActi
                                 additives.setVisibility(VISIBLE);
                                 novaGroup.setImageResource(novaGroupDrawable);
                             } else {
-                                novaGroup.setVisibility(INVISIBLE);
+                                novaGroup.setVisibility(GONE);
                             }
                         } else {
                             novaGroup.setVisibility(GONE);
@@ -347,7 +353,7 @@ public class ContinuousScanActivity extends androidx.appcompat.app.AppCompatActi
                             co2Icon.setVisibility(VISIBLE);
                             co2Icon.setImageResource(environmentImpactResource);
                         } else {
-                            co2Icon.setVisibility(INVISIBLE);
+                            co2Icon.setVisibility(GONE);
                         }
                         FragmentManager fm = getSupportFragmentManager();
                         FragmentTransaction fragmentTransaction = fm.beginTransaction();
@@ -528,6 +534,7 @@ public class ContinuousScanActivity extends androidx.appcompat.app.AppCompatActi
         name.setVisibility(GONE);
         frameLayout.setVisibility(GONE);
         additives.setVisibility(GONE);
+        dietState.setVisibility(GONE);
         nutriScore.setVisibility(GONE);
         novaGroup.setVisibility(GONE);
         co2Icon.setVisibility(GONE);
@@ -914,6 +921,26 @@ public class ContinuousScanActivity extends androidx.appcompat.app.AppCompatActi
     public void collapseBottomSheet() {
         if (bottomSheetBehavior != null) {
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+        }
+    }
+
+    public void setDietState(long productState){
+        dietState.setVisibility(VISIBLE);
+        switch (Long.toString(productState)) {
+            case "-1":
+                dietState.setImageResource(R.drawable.trafficligth_red);
+                break;
+            case "0":
+                dietState.setImageResource(R.drawable.trafficligth_orange);
+                break;
+            case "1":
+                dietState.setImageResource(R.drawable.trafficligth_green);
+                break;
+            case "2":
+                dietState.setImageResource(R.drawable.trafficligth_grey);
+                break;
+            default:
+                dietState.setVisibility(GONE);
         }
     }
 

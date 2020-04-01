@@ -149,6 +149,12 @@ public class DatabaseHelper extends DaoMaster.OpenHelper {
                 InvalidBarcodeDao.createTable(db, true);
                 break;
             }
+            case 17: {
+                DietDao.createTable(db,true);
+                DietNameDao.createTable(db,true);
+                DietIngredientsDao.createTable(db,true);
+                break;
+            }
         }
     }
 

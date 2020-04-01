@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">La/es vostra/es dieta/es</string>
+    <string name="diet_name">Nom de la dieta</string>
+    <string name="diets_dialog_warning_title">Avís</string>
+    <string name="warning_diets_data">Les vostres dietes es desen al vostre dispositiu. No es carregaran enlloc.</string>
+    <string name="edit_diet_name">Nom</string>
+    <string name="edit_diet_description">Descripció</string>
+    <string name="edit_diet_enabled_disabled">Habilitat/Deshabilitat</string>
+    <string name="edit_diet_authorised_ingredients">Ingredients autoritzats</string>
+    <string name="edit_diet_hint_ingredient_authorised">Llista els ingredients autoritzats, que haurien d\'aparèixer en verd. Exemple: poma, bolet, tomàquet… Podeu completar aquesta llista més endavant.</string>
+    <string name="edit_diet_so_so_ingredients">Ingredients poc recomanables</string>
+    <string name="edit_diet_hint_so_so_ingredient">Llista els ingredients problemàtics, que haurien d\'aparèixer en taronja. Exemple: ou, peix… Podeu completar aquesta llista més endavant.</string>
+    <string name="edit_diet_unauthorised_ingredients">Ingredients no autoritzats</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">Llista els ingredients no autoritzats, que haurien d\'aparèixer en vermell. Exemple: gluten, llet, oli de palma, sucre ... Podeu completar aquesta llista més endavant.</string>
+    <!-- End of used for diets AddOn -->
+</resources>

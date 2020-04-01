@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="adjustResize">
+
+    <ScrollView
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:windowSoftInputMode="adjustResize"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="68dp"
+                android:windowSoftInputMode="adjustResize"
+                app:layout_constraintBottom_toTopOf="@+id/bottom_navigation">
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/left_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/activity_horizontal_margin" />
+            <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/right_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/activity_horizontal_margin" />
+            <EditText
+                    android:id="@+id/diet_id"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#dd0b16"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                    android:id="@+id/section_diet_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:text="@string/edit_diet_name"
+                    android:textColor="#dd0b16"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                    android:id="@+id/diet_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:autofillHints=""
+                    android:hint="@string/edit_diet_hint_name_of_the_diet"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:nextFocusDown="@id/diet_description"
+                    android:padding="@dimen/spacing_tiny"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/section_diet_name" />
+            <TextView
+                    android:id="@+id/section_diet_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:text="@string/edit_diet_description"
+                    android:textColor="#dd0b16"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/diet_name" />
+            <EditText
+                    android:id="@+id/diet_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:background="@drawable/bg_edittext"
+                    android:hint="@string/edit_diet_hint_description_of_the_diet"
+                    android:gravity="center_vertical"
+                    android:inputType="textMultiLine"
+                    android:nextFocusDown="@id/diet_enabled"
+                    android:padding="@dimen/spacing_tiny"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/section_diet_description" />
+            <Switch
+                    android:id="@+id/diet_enabled"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:nextFocusDown="@id/diet_name"
+                    android:text="@string/edit_diet_enabled_disabled"
+                    android:textColor="#dd0b16"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/diet_description" />
+            <View
+                    android:id="@+id/grey_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/spacing_tiny"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:layout_marginRight="@dimen/spacing_tiny"
+                    android:background="@color/grey_400"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/diet_enabled" />
+            <TextView
+                    android:id="@+id/section_ingredients_authorised"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:text="@string/edit_diet_authorised_ingredients"
+                    android:textColor="#00b400"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/grey_line1" />
+            <com.hootsuite.nachos.NachoTextView
+                    android:id="@+id/ingredients_authorised"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:background="@drawable/bg_edittext"
+                    android:completionThreshold="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/edit_diet_hint_ingredient_authorised"
+                    android:minHeight="150dp"
+                    android:nextFocusDown="@id/ingredients_soso"
+                    android:padding="@dimen/spacing_tiny"
+                    android:textSize="@dimen/font_small"
+                    app:chipBackground="#00b400"
+                    app:chipHeight="30dp"
+                    app:chipTextColor="@color/grey_800"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/section_ingredients_authorised" />
+            <TextView
+                    android:id="@+id/section_ingredients_soso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:text="@string/edit_diet_so_so_ingredients"
+                    android:textColor="#ff9900"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/ingredients_authorised" />
+            <com.hootsuite.nachos.NachoTextView
+                    android:id="@+id/ingredients_soso"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:background="@drawable/bg_edittext"
+                    android:completionThreshold="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/edit_diet_hint_so_so_ingredient"
+                    android:minHeight="150dp"
+                    android:nextFocusDown="@id/ingredients_unauthorised"
+                    android:padding="@dimen/spacing_tiny"
+                    android:textSize="@dimen/font_small"
+                    app:chipBackground="#ff9900"
+                    app:chipHeight="30dp"
+                    app:chipTextColor="@color/grey_800"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/section_ingredients_soso" />
+            <TextView
+                    android:id="@+id/section_ingredients_unauthorised"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:text="@string/edit_diet_unauthorised_ingredients"
+                    android:textColor="#ff0000"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/ingredients_soso" />
+            <com.hootsuite.nachos.NachoTextView
+                    android:id="@+id/ingredients_unauthorised"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:background="@drawable/bg_edittext"
+                    android:completionThreshold="1"
+                    android:gravity="center_vertical"
+                    android:hint="@string/edit_diet_hint_unauthorised_ingredient"
+                    android:minHeight="150dp"
+                    android:nextFocusDown="@id/diet_name"
+                    android:padding="@dimen/spacing_tiny"
+                    android:textSize="@dimen/font_small"
+                    app:chipBackground="#ff0000"
+                    app:chipHeight="30dp"
+                    app:chipTextColor="@color/grey_800"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/section_ingredients_unauthorised" />
+            <Button
+                    android:id="@+id/save_edits"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:layout_marginBottom="69dp"
+                    android:background="#4389FA"
+                    android:text="@string/save_edits"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@id/ingredients_unauthorised" />
+
+            <TextView
+                    android:id="@+id/textViewForSeeingButtonWhenScrolling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/left_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/save_edits" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include
+            android:id="@+id/bottom_navigation"
+            layout="@layout/navigation_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom" />
+
+</RelativeLayout>

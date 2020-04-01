@@ -431,6 +431,7 @@
     <string name="txtBarcodeRequire">Barcode required</string>
     <string name="txtOk">OK</string>
     <string name="txtBarcodeNotValid">Barcode not valid</string>
+    <string name="share">Share</string>
     <string name="msg_share">Look at this product on Open Food Facts :</string>
     <string name="create_account">Sign up</string>
     <string name="home_drawer">Home</string>

@@ -7,6 +7,15 @@ import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.style.ForegroundColorSpan;
+import android.widget.*;
+import androidx.annotation.Nullable;
+import androidx.browser.customtabs.CustomTabsIntent;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+import androidx.cardview.widget.CardView;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
@@ -47,6 +56,7 @@ import openfoodfacts.github.scrachx.openfood.fragments.BaseFragment;
 import openfoodfacts.github.scrachx.openfood.images.PhotoReceiver;
 import openfoodfacts.github.scrachx.openfood.images.ProductImage;
 import openfoodfacts.github.scrachx.openfood.jobs.PhotoReceiverHandler;
+import openfoodfacts.github.scrachx.openfood.models.AdditiveDao;
 import openfoodfacts.github.scrachx.openfood.models.AdditiveName;
 import openfoodfacts.github.scrachx.openfood.models.AllergenName;
 import openfoodfacts.github.scrachx.openfood.models.AllergenNameDao;
@@ -56,11 +66,16 @@ import openfoodfacts.github.scrachx.openfood.models.SendProduct;
 import openfoodfacts.github.scrachx.openfood.models.State;
 import openfoodfacts.github.scrachx.openfood.network.OpenFoodAPIClient;
 import openfoodfacts.github.scrachx.openfood.network.WikidataApiClient;
+import openfoodfacts.github.scrachx.openfood.repositories.DietRepository;
+import openfoodfacts.github.scrachx.openfood.repositories.IDietRepository;
+import openfoodfacts.github.scrachx.openfood.repositories.IProductRepository;
+import openfoodfacts.github.scrachx.openfood.repositories.ProductRepository;
 import openfoodfacts.github.scrachx.openfood.utils.FileUtils;
 import openfoodfacts.github.scrachx.openfood.utils.LocaleHelper;
 import openfoodfacts.github.scrachx.openfood.utils.SearchType;
 import openfoodfacts.github.scrachx.openfood.utils.Utils;
 import openfoodfacts.github.scrachx.openfood.views.AddProductActivity;
+import openfoodfacts.github.scrachx.openfood.views.ContinuousScanActivity;
 import openfoodfacts.github.scrachx.openfood.views.FullScreenActivityOpener;
 import openfoodfacts.github.scrachx.openfood.views.LoginActivity;
 import openfoodfacts.github.scrachx.openfood.views.ProductBrowsingListActivity;
@@ -68,6 +83,17 @@ import openfoodfacts.github.scrachx.openfood.views.ProductImageManagementActivit
 import openfoodfacts.github.scrachx.openfood.views.customtabs.CustomTabActivityHelper;
 import openfoodfacts.github.scrachx.openfood.views.customtabs.CustomTabsHelper;
 import openfoodfacts.github.scrachx.openfood.views.customtabs.WebViewFallback;
+import openfoodfacts.github.scrachx.openfood.views.product.ProductDietsActivity;
+
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.IllegalClassException;
+import org.apache.commons.lang.StringUtils;
+
+import java.io.File;
+import java.util.Collections;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static android.app.Activity.RESULT_OK;
 import static android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
@@ -81,6 +107,7 @@ public class IngredientsProductFragment extends BaseFragment implements IIngredi
     public static final Pattern INGREDIENT_PATTERN = Pattern.compile("[\\p{L}\\p{Nd}(),.-]+");
     private static final int LOGIN_ACTIVITY_REQUEST_CODE = 1;
     private static final int EDIT_REQUEST_CODE = 2;
+    private static final int EDIT_PRODUCT_DIETS_CODE = 3;
     @BindView(R.id.textIngredientProduct)
     TextView ingredientsProduct;
     private AllergenNameDao mAllergenNameDao;
@@ -140,6 +167,10 @@ public class IngredientsProductFragment extends BaseFragment implements IIngredi
     private String mUrlImage;
     private State activityState;
     private String barcode;
+    private AdditiveDao mAdditiveDao;
+    private IProductRepository productRepository;
+    private IDietRepository dietRepository;
+    private IngredientsProductFragment mFragment;
     private SendProduct mSendProduct;
     private WikidataApiClient apiClientForWikiData;
     private CustomTabActivityHelper customTabActivityHelper;
@@ -154,6 +185,8 @@ public class IngredientsProductFragment extends BaseFragment implements IIngredi
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+        productRepository = ProductRepository.getInstance();
+        dietRepository = DietRepository.getInstance();
         customTabActivityHelper = new CustomTabActivityHelper();
         customTabsIntent = CustomTabsHelper.getCustomTabsIntent(getContext(), customTabActivityHelper.getSession());
 
@@ -257,6 +290,43 @@ public class IngredientsProductFragment extends BaseFragment implements IIngredi
             textIngredientProductCardView.setVisibility(View.VISIBLE);
             SpannableStringBuilder txtIngredients = new SpannableStringBuilder(product.getIngredientsText(langCode).replace("_", ""));
             txtIngredients = setSpanBoldBetweenTokens(txtIngredients, allergens);
+            //txtIngredients = dietRepository.getColoredSSBFromSSBAndProduct(txtIngredients, product);
+            //txtIngredients.subSequence(txtIngredients.length()-2,txtIngredients.length()).toString();
+            //txtIngredients = txtIngredients.replace(txtIngredients.length()-2,txtIngredients.length(),"");
+            Object[] txtIngredientsProductState = (Object[]) dietRepository.getColoredSSBAndProductStateFromSSBAndProduct(txtIngredients, product);
+            txtIngredients = (SpannableStringBuilder) txtIngredientsProductState[0];
+            int productState = (int) txtIngredientsProductState[1];
+            FragmentManager fragmentManager = getFragmentManager();
+            Fragment fragmentSummary = fragmentManager.getFragments().get(0);
+            ImageView dietState = fragmentSummary.getView().findViewById(R.id.dietState);
+            dietState.setVisibility(View.VISIBLE);
+            //If Continuous ScanActivity is active, then add the productState
+            try {
+                ((ContinuousScanActivity) getActivity()).setDietState(productState);
+            } catch (Exception e) {
+                //Just continue
+                Toast.makeText(getActivity(), e.getMessage(),Toast.LENGTH_LONG).show();
+            }
+            switch (productState) {
+                case DietRepository.DIET_STATE_FORBIDEN:
+                    dietState.setImageResource(R.drawable.trafficligth_red);
+                    dietState.setContentDescription("@string/edit_diet_unauthorised_ingredients");
+                    break;
+                case DietRepository.DIET_STATE_SOSO:
+                    dietState.setImageResource(R.drawable.trafficligth_orange);
+                    dietState.setContentDescription("@string/edit_diet_so_so_ingredients");
+                    break;
+                case DietRepository.DIET_STATE_AUTHORISED:
+                    dietState.setImageResource(R.drawable.trafficligth_green);
+                    dietState.setContentDescription("@string/edit_authorised_ingredients");
+                    break;
+                case DietRepository.DIET_STATE_UNKNOWN:
+                    dietState.setImageResource(R.drawable.trafficligth_grey);
+                    //dietState.setContentDescription("@string/edit_authorised_ingredients");
+                    break;
+                default:
+                    dietState.setVisibility(View.INVISIBLE);
+            }
             if (TextUtils.isEmpty(product.getIngredientsText(langCode))) {
                 extractIngredientsPrompt.setVisibility(View.VISIBLE);
             }
@@ -601,6 +671,9 @@ public class IngredientsProductFragment extends BaseFragment implements IIngredi
         if (requestCode == EDIT_REQUEST_CODE && resultCode == RESULT_OK) {
             onRefresh();
         }
+        if (requestCode == EDIT_PRODUCT_DIETS_CODE) {
+            onRefresh();
+        }
         if (ProductImageManagementActivity.isImageModified(requestCode, resultCode)) {
             onRefresh();
         }
@@ -610,6 +683,15 @@ public class IngredientsProductFragment extends BaseFragment implements IIngredi
 
     public String getIngredients() {
         return mUrlImage;
+    }
+
+    @OnClick(R.id.textIngredientProduct)
+    public void openFragmentDietIngredientsProduct(View v) {
+        if (dietRepository.getDietCount() > 0) {
+            Intent intent = new Intent(getActivity(), ProductDietsActivity.class);
+            intent.putExtra("state", activityState);
+            startActivityForResult(intent, EDIT_PRODUCT_DIETS_CODE);
+        }
     }
 
     @Override

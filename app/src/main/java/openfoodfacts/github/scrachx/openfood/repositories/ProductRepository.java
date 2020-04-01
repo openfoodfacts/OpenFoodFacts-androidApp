@@ -1,5 +1,6 @@
 package openfoodfacts.github.scrachx.openfood.repositories;
 
+import android.database.Cursor;
 import android.content.SharedPreferences;
 import android.util.Log;
 
@@ -180,6 +181,7 @@ public class ProductRepository implements IProductRepository {
      * @param <T> type of taxonomy
      */
     private <T> Single<List<T>> getTaxonomyData(Taxonomy taxonomy, boolean checkUpdate, boolean loadFromLocalDatabase, AbstractDao dao) {
+        Log.i(TAG, "getTaxonomyData  launch with : " + taxonomy + ", " + checkUpdate + ", " + loadFromLocalDatabase + " and " + dao);
         //First check if this taxonomy is to be loaded.
         SharedPreferences mSettings = OFFApplication.getInstance().getSharedPreferences("prefs", 0);
         boolean isDownloadActivated = mSettings.getBoolean(taxonomy.getDownloadActivatePreferencesId(), false);
@@ -291,13 +293,9 @@ public class ProductRepository implements IProductRepository {
 
     /**
      * TODO to be improved by loading only in the user language ?
-     * Load ingredients from (the server or) local database
-     * If SharedPreferences lastDownloadIngredients is set try this :
-     * if file from the server is newer than last download delete database, load the file and fill database,
-     * else if database is empty, download the file and fill database,
-     * else return the content from the local database.
+     * Load ingredients from the server or local database
      *
-     * @return The ingredients in the product.
+     * @return The list of ingredients.
      */
     public Single<List<Ingredient>> reloadIngredientsFromServer() {
         return getTaxonomyData(Taxonomy.INGREDIENT, true, false, ingredientDao);
@@ -329,11 +327,11 @@ public class ProductRepository implements IProductRepository {
             httpCon.disconnect();
         } catch (IOException e) {
             //Problem
-            Log.e(getClass().getName(), "getLastModifiedDate", e);
-            Log.i(getClass().getName(), "getLastModifiedDate for : " + taxonomy + " end, return " + TAXONOMY_NO_INTERNET);
+            Log.e(TAG, "getLastModifiedDate", e);
+            Log.i(TAG, "getLastModifiedDate for : " + taxonomy + " end, return " + TAXONOMY_NO_INTERNET);
             return TAXONOMY_NO_INTERNET;
         }
-        Log.i(getClass().getName(), "getLastModifiedDate for : " + taxonomy + " end, return " + lastModifiedDate);
+        Log.i(TAG, "getLastModifiedDate for : " + taxonomy + " end, return " + lastModifiedDate);
         return lastModifiedDate;
     }
 
@@ -498,13 +496,14 @@ public class ProductRepository implements IProductRepository {
      * set the autoincrement to 0
      */
     public void deleteIngredientCascade() {
+        Log.i(TAG,"deleteIngredientCascade");
         ingredientDao.deleteAll();
         ingredientNameDao.deleteAll();
         ingredientsRelationDao.deleteAll();
+        //reset sequences.
         DaoSession daoSession = OFFApplication.getInstance().getDaoSession();
         daoSession.getDatabase().execSQL(
-            "update sqlite_sequence set seq=0 where name in ('" + ingredientDao.getTablename() + "', '" + ingredientNameDao.getTablename() + "', '" + ingredientsRelationDao
-                .getTablename() + "')");
+            "update sqlite_sequence set seq=0 where name in ('" + ingredientDao.getTablename() + "', '" + ingredientNameDao.getTablename() + "', '" + ingredientsRelationDao.getTablename() + "')");
     }
 
     /**
@@ -516,6 +515,12 @@ public class ProductRepository implements IProductRepository {
      *     Ingredient and IngredientName has One-To-Many relationship, therefore we need to save them separately.
      */
     private void saveIngredients(List<Ingredient> ingredients) {
+        Log.i(TAG,"saveIngredients");
+        boolean complete = false;
+        if (tableIsEmpty(ingredientDao)) {
+            //If table ingredient is empty then it has probably been truncated so we have to complete it after this saving.
+            complete = true;
+        }
         db.beginTransaction();
         try {
             for (Ingredient ingredient : ingredients) {
@@ -537,6 +542,39 @@ public class ProductRepository implements IProductRepository {
         } finally {
             db.endTransaction();
         }
+        if (complete) {
+            //Check ingredient from other tables (DietIngredients for the moment)
+            DaoSession daoSession = OFFApplication.getInstance().getDaoSession();
+            //Query this result of a list of IngredientTag not in Ingredient table and ingredientTag that may be the new correspondance.
+            String SQL = "select ITTF.INGREDIENT_TAG TAGTF, INGREDIENT_NAME.INGREDIENT_TAG TAGTR from (select DIET_INGREDIENTS.INGREDIENT_TAG from DIET_INGREDIENTS left join INGREDIENT on DIET_INGREDIENTS.INGREDIENT_TAG=INGREDIENT.TAG where INGREDIENT.TAG is null) ITTF left join INGREDIENT_NAME on lower(ITTF.INGREDIENT_TAG)=INGREDIENT_NAME.LANGUAGE_CODE||':'||lower(replace(INGREDIENT_NAME.NAME,' ','-'))";
+            ArrayList<String> result = new ArrayList<String>();
+            //execute sql via a cursor
+            Cursor c = daoSession.getDatabase().rawQuery(SQL, null);
+            try {
+                if (c.moveToFirst()) {
+                    do {
+                        if (c.getString(1) == null) {
+                            //TAGTR is null (no correspondance found) create a new ingredient
+                            String tag = c.getString(0);
+                            String[] tagSplit = tag.split(":");
+                            IngredientName ingredientName = new IngredientName(tag, tagSplit[0], tagSplit[1]);
+                            List<IngredientName> ingredientNames = new ArrayList<>();
+                            ingredientNames.add(ingredientName);
+                            Ingredient ingredient = new Ingredient(tag, ingredientNames, null, null);
+                            saveIngredient(ingredient);
+                        } else {
+                            //replace TAGTF by TAGTR in Table
+                            daoSession.getDatabase().execSQL("update DIET_INGREDIENTS set INGREDIENT_TAG='" + c.getString(1) + "' where INGREDIENT_TAG='" + c.getString(0) + "'");
+                        }
+                    } while (c.moveToNext());
+                }
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                c.close();
+            }
+        }
     }
 
     /**
@@ -544,7 +582,6 @@ public class ProductRepository implements IProductRepository {
      *
      * @param ingredient The ingredient to be saved.
      */
-    @Override
     public void saveIngredient(Ingredient ingredient) {
         List<Ingredient> ingredients = new ArrayList<>();
         ingredients.add(ingredient);

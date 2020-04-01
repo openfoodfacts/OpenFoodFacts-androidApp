@@ -24,7 +24,6 @@ public class IngredientsWrapper {
      * @return A list of Ingredient objects
      */
     public List<Ingredient> map() {
-        Log.i("INFO", "IngredientWrapper.map()");
         List<Ingredient> entityIngredients = new ArrayList<>();
         for (IngredientResponse ingredient : ingredients) {
             entityIngredients.add(ingredient.map());

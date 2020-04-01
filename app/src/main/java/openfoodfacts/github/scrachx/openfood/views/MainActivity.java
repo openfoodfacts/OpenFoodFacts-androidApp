@@ -87,6 +87,7 @@ import butterknife.BindView;
 import openfoodfacts.github.scrachx.openfood.BuildConfig;
 import openfoodfacts.github.scrachx.openfood.R;
 import openfoodfacts.github.scrachx.openfood.fragments.AllergensAlertFragment;
+import openfoodfacts.github.scrachx.openfood.fragments.DietsFragment;
 import openfoodfacts.github.scrachx.openfood.fragments.FindProductFragment;
 import openfoodfacts.github.scrachx.openfood.fragments.HomeFragment;
 import openfoodfacts.github.scrachx.openfood.fragments.OfflineEditFragment;
@@ -300,6 +301,7 @@ public class MainActivity extends BaseActivity implements CustomTabActivityHelpe
                         new PrimaryDrawerItem().withName(R.string.your_lists).withIcon(GoogleMaterial.Icon.gmd_list).withIdentifier(ITEM_YOUR_LISTS).withSelectable(false),
                         new PrimaryDrawerItem().withName(R.string.products_to_be_completed).withIcon(GoogleMaterial.Icon.gmd_edit).withIdentifier(ITEM_INCOMPLETE_PRODUCTS).withSelectable(false),
                         new PrimaryDrawerItem().withName(R.string.alert_drawer).withIcon(GoogleMaterial.Icon.gmd_warning).withIdentifier(ITEM_ALERT),
+                        new PrimaryDrawerItem().withName(R.string.your_diets).withIcon(GoogleMaterial.Icon.gmd_traffic).withIdentifier(ITEM_DIET),
                         new PrimaryDrawerItem().withName(R.string.action_preferences).withIcon(GoogleMaterial.Icon.gmd_settings).withIdentifier(ITEM_PREFERENCES),
                         new DividerDrawerItem(),
                         primaryDrawerItem,
@@ -314,59 +316,61 @@ public class MainActivity extends BaseActivity implements CustomTabActivityHelpe
                         return false;
                     }
 
-                Fragment fragment = null;
-                switch ((int) drawerItem.getIdentifier()) {
-                    case ITEM_HOME:
-                        fragment = new HomeFragment();
-                        break;
-                    case ITEM_SEARCH_BY_CODE:
-                        fragment = new FindProductFragment();
-                        break;
-                    case ITEM_CATEGORIES:
-                        startActivity(CategoryActivity.getIntent(this));
-                        break;
 
-                    case ITEM_ADDITIVES:
-                        startActivity(new Intent(this, AdditivesExplorer.class));
-                        break;
-                    case ITEM_SCAN:
-                        scan();
-                        break;
-                    case ITEM_COMPARE:
-                        startActivity(new Intent(MainActivity.this, ProductComparisonActivity.class));
-                        break;
-                    case ITEM_HISTORY:
-                        startActivity(new Intent(MainActivity.this, HistoryScanActivity.class));
-                        break;
-                    case ITEM_LOGIN:
-                        startActivityForResult(new Intent(MainActivity.this, LoginActivity
-                            .class), LOGIN_REQUEST);
-                        break;
-                    case ITEM_ALERT:
-                        fragment = new AllergensAlertFragment();
-                        break;
-                    case ITEM_PREFERENCES:
-                        fragment = new PreferencesFragment();
-                        break;
-                    case ITEM_OFFLINE:
-                        fragment = new OfflineEditFragment();
-                        break;
-                    case ITEM_ABOUT:
-                        CustomTabActivityHelper.openCustomTab(MainActivity.this,
-                            customTabsIntent, discoverUri, new WebViewFallback());
-                        break;
-                    case ITEM_CONTRIBUTE:
-                        CustomTabActivityHelper.openCustomTab(MainActivity.this,
-                            customTabsIntent, contributeUri, new WebViewFallback());
-                        break;
+                    Fragment fragment = null;
+                    switch ((int) drawerItem.getIdentifier()) {
+                        case ITEM_HOME:
+                            fragment = new HomeFragment();
+                            break;
+                        case ITEM_SEARCH_BY_CODE:
+                            fragment = new FindProductFragment();
+                            break;
+                        case ITEM_CATEGORIES:
+                            startActivity(CategoryActivity.getIntent(this));
+                            break;
+                        case ITEM_ADDITIVES:
+                            startActivity(new Intent(this, AdditivesExplorer.class));
+                            break;
+                        case ITEM_SCAN:
+                            scan();
+                            break;
+                        case ITEM_COMPARE:
+                            startActivity(new Intent(MainActivity.this, ProductComparisonActivity.class));
+                            break;
+                        case ITEM_HISTORY:
+                            startActivity(new Intent(MainActivity.this, HistoryScanActivity.class));
+                            break;
+                        case ITEM_LOGIN:
+                            startActivityForResult(new Intent(MainActivity.this, LoginActivity
+                                    .class), LOGIN_REQUEST);
+                            break;
+                        case ITEM_ALERT:
+                            fragment = new AllergensAlertFragment();
+                            break;
+                        case ITEM_DIET:
+                            fragment = new DietsFragment();
+                            break;
+                        case ITEM_PREFERENCES:
+                            fragment = new PreferencesFragment();
+                            break;
+                        case ITEM_OFFLINE:
+                            fragment = new OfflineEditFragment();
+                            break;
+                        case ITEM_ABOUT:
+                            CustomTabActivityHelper.openCustomTab(MainActivity.this,
+                                    customTabsIntent, discoverUri, new WebViewFallback());
+                            break;
+                        case ITEM_CONTRIBUTE:
+                            CustomTabActivityHelper.openCustomTab(MainActivity.this,
+                                    customTabsIntent, contributeUri, new WebViewFallback());
+                            break;
 
-                    case ITEM_INCOMPLETE_PRODUCTS:
-
-                        /**
-                         * Search and display the products to be completed by moving to ProductBrowsingListActivity
-                         */
-                        ProductBrowsingListActivity.startActivity(this, "", SearchType.INCOMPLETE_PRODUCT);
-                        break;
+                        case ITEM_INCOMPLETE_PRODUCTS:
+                            /**
+                             * Search and display the products to be completed by moving to ProductBrowsingListActivity
+                             */
+                            ProductBrowsingListActivity.startActivity(this, "", SearchType.INCOMPLETE_PRODUCT);
+                            break;
 
                     case ITEM_OBF:
                         boolean otherOFAppInstalled = Utils.isApplicationInstalled
@@ -449,10 +453,12 @@ public class MainActivity extends BaseActivity implements CustomTabActivityHelpe
 
         if (BuildConfig.FLAVOR.equals("opff")) {
             result.removeItem(ITEM_ALERT);
+            result.removeItem(ITEM_DIET);
         }
 
         if (BuildConfig.FLAVOR.equals("opf")) {
             result.removeItem(ITEM_ALERT);
+            result.removeItem(ITEM_DIET);
             result.removeItem(ITEM_ADDITIVES);
             result.removeItem(ITEM_ADVANCED_SEARCH);
         }
@@ -1078,4 +1084,3 @@ public class MainActivity extends BaseActivity implements CustomTabActivityHelpe
         Objects.requireNonNull(getSupportActionBar()).setTitle(title);
     }
 }
-

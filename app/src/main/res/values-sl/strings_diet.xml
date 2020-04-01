@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">Vaše diete</string>
+    <string name="diet_name">Ime diete</string>
+    <string name="diets_dialog_warning_title">Opozorilo</string>
+    <string name="warning_diets_data">Vaši podatki o dieti ostanejo na vaši napravi. Nič se ne bo preneslo nikamor.</string>
+    <string name="edit_diet_name">Ime</string>
+    <string name="edit_diet_description">Opis</string>
+    <string name="edit_diet_enabled_disabled">Omogočeno / Onemogočeno</string>
+    <string name="edit_diet_authorised_ingredients">Odobrene sestavine</string>
+    <string name="edit_diet_hint_ingredient_authorised">Seznam odobrenih sestavin, ki naj bodo zelene barve. Primer: jabolko, gobe, paradižnik… Seznam lahko dopolnite pozneje.</string>
+    <string name="edit_diet_so_so_ingredients">Sestavine tako, tako</string>
+    <string name="edit_diet_hint_so_so_ingredient">Seznam problematičnih sestavin, ki naj se prikaže v oranžni barvi. Primer: jajce, ribe ... Ta seznam lahko dokončate kasneje.</string>
+    <string name="edit_diet_unauthorised_ingredients">Neodobrene sestavine</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">Seznam neodobrenih sestavin, ki naj se prikaže v rdeči barvi. Primer: brez glutena, mleka, palmovo olje, sladkor... Ta seznam lahko dokončate pozneje.</string>
+    <!-- End of used for diets AddOn -->
+</resources>

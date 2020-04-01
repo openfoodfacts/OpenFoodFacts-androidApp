@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">crwdns114462:0crwdne114462:0</string>
+    <string name="diet_name">crwdns114464:0crwdne114464:0</string>
+    <string name="diets_dialog_warning_title">crwdns114466:0crwdne114466:0</string>
+    <string name="warning_diets_data">crwdns114468:0crwdne114468:0</string>
+    <string name="edit_diet_name">crwdns114470:0crwdne114470:0</string>
+    <string name="edit_diet_description">crwdns114472:0crwdne114472:0</string>
+    <string name="edit_diet_enabled_disabled">crwdns114474:0crwdne114474:0</string>
+    <string name="edit_diet_authorised_ingredients">crwdns114476:0crwdne114476:0</string>
+    <string name="edit_diet_hint_ingredient_authorised">crwdns114478:0crwdne114478:0</string>
+    <string name="edit_diet_so_so_ingredients">crwdns114480:0crwdne114480:0</string>
+    <string name="edit_diet_hint_so_so_ingredient">crwdns114482:0crwdne114482:0</string>
+    <string name="edit_diet_unauthorised_ingredients">crwdns114484:0crwdne114484:0</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">crwdns114486:0crwdne114486:0</string>
+    <!-- End of used for diets AddOn -->
+</resources>

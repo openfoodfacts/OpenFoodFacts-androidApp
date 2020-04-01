@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">Ваши диеты</string>
+    <string name="diet_name">Название диеты</string>
+    <string name="diets_dialog_warning_title">Предупреждение</string>
+    <string name="warning_diets_data">Данные о вашей диете остаются на вашем устройстве. Ничего не будет загружено куда-либо.</string>
+    <string name="edit_diet_name">Название</string>
+    <string name="edit_diet_description">Описание</string>
+    <string name="edit_diet_enabled_disabled">Включить/Выключить</string>
+    <string name="edit_diet_authorised_ingredients">Разрешённые ингредиенты</string>
+    <string name="edit_diet_hint_ingredient_authorised">Перечислите разрешенные ингредиенты, которые будут отображаться зеленым цветом. Наример: яблоки, грибы, помидоры... Вы можете дополнить список позже.</string>
+    <string name="edit_diet_so_so_ingredients">Нежелательные ингредиенты</string>
+    <string name="edit_diet_hint_so_so_ingredient">Перечислите нежелательные ингредиенты, которые будут отображаться оранжевым цветом. Наример: яйца, рыба... Вы можете дополнить список позже.</string>
+    <string name="edit_diet_unauthorised_ingredients">Запрещенные ингредиенты</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">Перечислите запрещенные ингредиенты, которые будут отображаться красным цветом. Наример: глютен, молоко, пальмовое масло, сахар... Вы можете дополнить список позже.</string>
+    <!-- End of used for diets AddOn -->
+</resources>

@@ -1,0 +1,33 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">Vos régimes</string>
+    <string name="diet_name">Nom du régime</string>
+    <string name="diets_dialog_warning_title">Attention</string>
+    <string name="warning_diets_data">Les données de votre(s) régime(s) restent sur votre appareil. Rien ne sera téléversé nulle part.</string>
+    <string name="edit_diet_name">Nom</string>
+    <string name="edit_diet_description">Description</string>
+    <string name="edit_diet_enabled_disabled">Activé/Désactivé</string>
+    <string name="edit_diet_authorised_ingredients">Ingrédients autorisés</string>
+    <string name="edit_diet_hint_ingredient_authorised">Énumérez les ingrédients autorisés qui devraient être en vert. Exemple : pomme, champignon, tomate… Vous pourrez remplir cette liste plus tard.</string>
+    <string name="edit_diet_so_so_ingredients">Ingrédients peu recommandés</string>
+    <string name="edit_diet_hint_so_so_ingredient">Énumérez les ingrédients problématiques qui devraient être en orange. Exemple : œuf, poisson… Vous pourrez remplir cette liste plus tard.</string>
+    <string name="edit_diet_unauthorised_ingredients">Ingrédients non autorisés</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">Énumérez les ingrédients non autorisés qui devraient être en rouge. Exemple : gluten, lait, huile de palme, sucre... Vous pourrez remplir cette liste plus tard.</string>
+    <string name="diet_export_1">Pour avoir ce nouveau régime dans OpenFoodFacts, merci d\'ouvrir l\'appli OFF, d\'aller dans le menu</string>
+    <string name="diet_export_2">Cliquer sur le bouton Ajouter un régime\nCopier/Coller les informations suivantes dans les champs correspondants :</string>
+    <string name="diet_export_3">Cliquer sur</string>
+    <string name="add_a_diet">Ajouter un régime</string>
+    <string name="edit_diet_hint_name_of_the_diet">Un nom explicite pour votre régime (obligatoire)</string>
+    <string name="edit_diet_toast_name_of_the_diet">Merci de donner un nom explicite pour votre régime !</string>
+    <string name="edit_diet_hint_description_of_the_diet">La description optionnelle de votre régime</string>
+    <string name="warning_diets_taxonomy">Cependant, pour un meilleur fonctionnement, vous téléchargerez automatiquement la taxonomie des ingrédients lors de la création de votre premier régime.</string>
+    <string name="warning_diets_online">Aussi, merci de vérifier que vous êtes connecté avant votre premier click sur le bouton \"Ajouter un régime\" !</string>
+    <string name="warning_one_diet_1">Maintenant que vous avez créé un régime, vous pouvez voir ses effets en scannant un produit (un feu de tricolor apparaît en cas de problème) et en consultant ses ingrédients.</string>
+    <string name="warning_one_diet_2">Vous pourrez alors cliquer sur cette liste d\'ingrédients pour compléter votre régime.</string>
+    <string name="warning_one_diet_3">Vous pouvez également ajouter d\'autres régimes et les activer/désactiver.</string>
+    <string name="edit_diet_remove">Supprimer ce régime.</string>
+    <string name="title_remove_diet_dialog">Suppression</string>
+    <string name="text_remove_diet_dialog">Voulez-vous supprimer ce régime et toutes ces relations ?</string>
+    <string name="ingredients_loading">Chargement initial des ingredients</string>
+    <!-- End of used for diets AddOn -->
+</resources>

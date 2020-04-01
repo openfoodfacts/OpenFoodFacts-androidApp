@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">Din(-e) diæt(-er)</string>
+    <string name="diet_name">Diætnavn</string>
+    <string name="diets_dialog_warning_title">Advarsel</string>
+    <string name="warning_diets_data">Dine diætdata forbliver på din enhed. Intet uploades nogetsteds.</string>
+    <string name="edit_diet_name">Navn</string>
+    <string name="edit_diet_description">Beskrivelse</string>
+    <string name="edit_diet_enabled_disabled">Aktivér/Deaktivér</string>
+    <string name="edit_diet_authorised_ingredients">Godkendte ingredienser</string>
+    <string name="edit_diet_hint_ingredient_authorised">Angiv de godkendte ingredienser, som skal vises med grønt. Eksempel: Æble, champignon, tomat... Du kan færdiggøre listen senere.</string>
+    <string name="edit_diet_so_so_ingredients">-</string>
+    <string name="edit_diet_hint_so_so_ingredient">Angiv de problematiske ingredienser, som skal vises med orange. Eksempel: Æg, fisk... Du kan færdiggøre listen senere.</string>
+    <string name="edit_diet_unauthorised_ingredients">Ikke-godkendte ingredienser</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">Angiv de ikke-godkendte ingredienser, som skal vises med rødt. Eksempel: Gluten, mælk, plameolie, sukker... Du kan færdiggøre listen senere.</string>
+    <!-- End of used for diets AddOn -->
+</resources>

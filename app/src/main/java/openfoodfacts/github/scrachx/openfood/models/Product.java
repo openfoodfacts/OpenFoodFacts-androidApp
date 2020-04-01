@@ -1,5 +1,6 @@
 package openfoodfacts.github.scrachx.openfood.models;
 
+import android.widget.Toast;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -155,6 +156,10 @@ public class Product implements Serializable {
     private List<String> ingredientsAnalysisTags = new ArrayList<>();
     @JsonProperty("ingredients")
     private List<LinkedHashMap<String, String>> ingredients = new ArrayList<>();
+    private List<ProductIngredient> productIngredients = new ArrayList<>();
+/*
+    @JsonProperty("ingredients")
+*/
 
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
@@ -490,6 +495,38 @@ public class Product implements Serializable {
      */
     public String getIngredientsText() {
         return ingredientsText;
+    }
+
+    /**
+     * @return The ingredients
+     */
+    public List<ProductIngredient> getProductIngredients() {
+        if (productIngredients.size() == 0) {
+            for (int i = 0; i < ingredients.size(); i++) {
+                ProductIngredient productIngredient = new ProductIngredient();
+                LinkedHashMap<String, String> ingredientHM =  ingredients.get(i);
+                for (Map.Entry<String, String> entry : ingredientHM.entrySet()) {
+                    switch (entry.getKey()) {
+                        case "id":
+                            productIngredient.setId(entry.getValue());
+                            break;
+                        case "percent":
+                            productIngredient.setPercent(entry.getValue());
+                            break;
+                        case "text":
+                            productIngredient.setText(entry.getValue());
+                            break;
+                        case "rank":
+                            productIngredient.setRank(Long.valueOf(entry.getValue()));
+                            break;
+                        default:
+                            productIngredient.setAdditionalProperty(entry.getKey(),entry.getValue());
+                    }
+                }
+                productIngredients.add(productIngredient);
+            }
+        }
+        return productIngredients;
     }
 
     /**

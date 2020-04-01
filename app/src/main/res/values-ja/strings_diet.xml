@@ -1,0 +1,17 @@
+<resources>
+    <!-- Used for diets AddOn -->
+    <string name="your_diets">あなたの規定食</string>
+    <string name="diet_name">既定食名</string>
+    <string name="diets_dialog_warning_title">警告</string>
+    <string name="warning_diets_data">あなたの食事データはあなたのデバイスに残ります。何もアップロードされません。</string>
+    <string name="edit_diet_name">名前</string>
+    <string name="edit_diet_description">説明</string>
+    <string name="edit_diet_enabled_disabled">有効/無効</string>
+    <string name="edit_diet_authorised_ingredients">承認された原材料</string>
+    <string name="edit_diet_hint_ingredient_authorised">緑色で表示すべき承認された原材料を一覧表示します。例 : りんご、きのこ、トマト… 後でこの一覧を完成させることができます。</string>
+    <string name="edit_diet_so_so_ingredients">So so ingredients</string>
+    <string name="edit_diet_hint_so_so_ingredient">オレンジ色で表示すべき問題のある原材料を一覧表示します。例 : 卵、魚… この一覧は後で完成させることができます。</string>
+    <string name="edit_diet_unauthorised_ingredients">未承認の原材料</string>
+    <string name="edit_diet_hint_unauthorised_ingredient">赤で表示すべき未承認の原材料を一覧表示します。例 : グルテン、牛乳、パーム油、砂糖... 後でこの一覧を完成させることができます。</string>
+    <!-- End of used for diets AddOn -->
+</resources>
