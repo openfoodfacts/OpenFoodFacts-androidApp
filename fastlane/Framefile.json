@@ -1,47 +1,47 @@
 {
-	"default": {
-		"keyword": {
-			"color": "#ffffff"
-		},
-		"title": {
-			"color": "#ffffff"
-		},
-		"background": "./background.png",
-		"padding": 50,
-		"show_complete_frame": false,
-		"stack_title": false,
-		"title_below_image": false
-	},
-	"data": [
-		{
-			"filter": "Find the best products",
-			"title": {
-				"text": "Find products that are good for you\nand for the planet"
-			}
-		},
-		{
-			"filter": "Compare",
-			"title": {
-				"text": "Compare products to choose the best one"
-			}
-		},
-		{
-			"filter": "Create lists",
-			"title": {
-				"text": "Create lists of products"
-			}
-		},
-		{
-			"filter": "Contribute",
-			"title": {
-				"text": "Join our community\nto increase food transparency everywhere"
-			}
-		},
-		{
-			"filter": "Allergen Alert",
-			"title": {
-				"text": "Set up allergen alerts"
-			}
-		}
-	]
+  "default": {
+    "keyword": {
+      "color": "#ffffff"
+    },
+    "title": {
+      "color": "#ffffff"
+    },
+    "background": "./background.png",
+    "padding": 50,
+    "show_complete_frame": false,
+    "stack_title": false,
+    "title_below_image": false
+  },
+  "data": [
+    {
+      "filter": "Find the best products",
+      "title": {
+        "text": "Find products that are good for you\nand for the planet"
+      }
+    },
+    {
+      "filter": "Compare",
+      "title": {
+        "text": "Compare products to choose the best one"
+      }
+    },
+    {
+      "filter": "Create lists",
+      "title": {
+        "text": "Create lists of products"
+      }
+    },
+    {
+      "filter": "Contribute",
+      "title": {
+        "text": "Join our community\nto increase food transparency everywhere"
+      }
+    },
+    {
+      "filter": "Allergen Alert",
+      "title": {
+        "text": "Set up allergen alerts"
+      }
+    }
+  ]
 }

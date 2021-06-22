@@ -1,6 +1,10 @@
-locales ['en-US']
+app_package_name 'org.openfoodfacts.scanner.screenshots'
+#tests_apk_path 'app/build/outputs/apk/off/debug/app-off-debug.apk'
+
+app_apk_path './app/build/outputs/apk/offPlayStore/screenshots/app-off-playstore-screenshots.apk'
+tests_apk_path './app/build/outputs/apk/androidTest/offPlaystore/screenshots/app-off-playstore-screenshots-androidTest.apk'
+
+test_instrumentation_runner 'openfoodfacts.github.scrachx.openfood.CustomTestRunner'
 clear_previous_screenshots true
-tests_apk_path 'app/build/outputs/apk/androidTest/off/screenshots/app-off-screenshots-androidTest.apk'
-app_apk_path 'app/build/outputs/apk/off/screenshots/app-off-screenshots.apk'
-test_instrumentation_runner 'androidx.test.runner.AndroidJUnitRunner'
-app_package_name 'openfoodfacts.github.scrachx.openfood.screenshots'
+
+locales ['en-US']

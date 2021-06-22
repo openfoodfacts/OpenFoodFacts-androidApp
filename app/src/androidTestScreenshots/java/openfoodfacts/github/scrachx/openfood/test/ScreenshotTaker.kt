@@ -8,7 +8,7 @@ import tools.fastlane.screengrab.Screengrab
 /**
  * Take screenshots...
  */
-class ScreenshotTaker {
+object ScreenshotTaker {
     fun takeScreenshot(
             screenshotParameter: ScreenshotParameter,
             suffix: String,
@@ -23,7 +23,7 @@ class ScreenshotTaker {
         )
     }
 
-    companion object {
-        private val LOG_TAG = ScreenshotTaker::class.simpleName
-    }
+
+    private val LOG_TAG = ScreenshotTaker::class.simpleName
+
 }

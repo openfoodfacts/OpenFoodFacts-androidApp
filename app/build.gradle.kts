@@ -27,8 +27,9 @@ plugins {
 fun obtainTestBuildType(): String {
     // To activate  screenshots buildType in IDE; uncomment next line and comment other
     // otherwise the folder androidTestScreenshots is not recognized as a test folder.
-    //val result = "screenshots"
-    val result = "debug"
+    // SWITCH SWITCH SWITCH
+    val result = "screenshots"
+    //val result = "debug"
 
     return project.properties.getOrDefault("testBuildType", result) as String
 }
@@ -230,7 +231,8 @@ android {
         versionCode = 433
         versionName = "3.6.8"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "openfoodfacts.github.scrachx.openfood.CustomTestRunner"
+
         vectorDrawables.useSupportLibrary = true
         ndk.abiFilters("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
 

@@ -2,9 +2,9 @@ package openfoodfacts.github.scrachx.openfood.models
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
+import com.google.common.truth.Truth.assertThat
 import openfoodfacts.github.scrachx.openfood.models.entities.OfflineSavedProduct
 import openfoodfacts.github.scrachx.openfood.network.ApiFields
-import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -24,12 +24,12 @@ class OfflineSavedProductTest {
 
     @Test
     fun getDetails_returnsEmptyMap() {
-        assertEquals(mapOf<String, String>(), offlineSavedProduct.productDetails)
+        assertThat(offlineSavedProduct.productDetails).isEmpty()
     }
 
     @Test
     fun getBarcode_returnsBarcode() {
-        assertEquals(BARCODE, offlineSavedProduct.barcode)
+        assertThat(offlineSavedProduct.barcode).isEqualTo(BARCODE)
     }
 
     @Test
@@ -56,7 +56,7 @@ class OfflineSavedProductTest {
                 ApiFields.Keys.NUTRIMENT_FAT_UNIT to FAT_UNIT
         )
         offlineSavedProduct.productDetails = productDetails
-        assertEquals(productDetails, offlineSavedProduct.productDetails)
+        assertThat(offlineSavedProduct.productDetails).isEqualTo(productDetails)
     }
 
     companion object {

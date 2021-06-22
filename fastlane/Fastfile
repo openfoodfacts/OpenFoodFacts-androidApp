@@ -1,4 +1,4 @@
-require_relative 'utils'
+require_relative "utils"
 fastlane_require "spaceship"
 
 lane :screenshots do
@@ -6,19 +6,19 @@ lane :screenshots do
 end
 
 desc "Build debug and test APK for screenshots"
-  lane :build_for_screengrab do
-    gradle(
-      task: 'clean'
-    )
-    build_android_app(
-      task: 'assemble',
-      build_type: 'DebugPlaystore'
-    )
-    build_android_app(
-      task: 'assemble',
-      build_type: 'AndroidTestPlaystore'
-    )
-  end
+lane :build_for_screengrab3 do
+  gradle(task: "clean")
+
+  gradle(
+    task: "assemble",
+    build_type: "DebugPlaystore",
+  )
+
+  gradle(
+    task: "assemble",
+    build_type: "AndroidTestPlaystore",
+  )
+end
 
 desc "Capture Screen"
 lane :capture_screen do
@@ -26,7 +26,34 @@ lane :capture_screen do
   screengrab
 end
 
-desc 'Create a release and upload to internal channel of playstore'
+desc "Build debug and test APK for screenshots"
+lane :build_for_screengrab do
+  gradle(task: "clean")
+
+  #build_android_app(
+  # task: 'assemble',
+  # build_type: 'Debug',
+  # flavor: "off",
+  # project_dir: './'
+  # )
+
+  gradle(
+    task: "app:connectedOffPlaystoreScreenshotsAndroidTest",
+    project_dir: "./",
+  )
+
+  #build_android_app(
+  #  task: 'assemble',
+  #  build_type: 'Screenshots',
+
+  #flavor: "Off",
+  #  project_dir: './'
+  # )
+end
+
+#gradlew connectedOffScreenshotsAndroidTest --stacktrace --info -PtestBuildType=screenshots
+
+desc "Create a release and upload to internal channel of playstore"
 lane :release do
     PACKAGE_NAME = CredentialsManager::AppfileConfig.try_fetch_value(:package_name)
     gradle_file = "./app/build.gradle.kts"
@@ -155,12 +182,14 @@ end
 
 desc 'Check the version currently in production and mark it as "finalized"'
 lane :finalize_sentry do
-    PACKAGE_NAME = CredentialsManager::AppfileConfig.try_fetch_value(:package_name)
-    versionName = google_play_track_version_name(track: 'production')
-    versionCode = google_play_track_version_codes(track: 'production').max
-    sentry_finalize_release(
-        org_slug: 'openfoodfacts',
-        project_slug: 'openfoodfacts-android',
-        version: PACKAGE_NAME + '@' + versionName.to_s + '+' + versionCode.to_s,
-    )
+  PACKAGE_NAME = CredentialsManager::AppfileConfig.try_fetch_value(:package_name)
+
+  versionName = google_play_track_version_name(track: "production")
+  versionCode = google_play_track_version_codes(track: "production").max
+
+  sentry_finalize_release(
+    org_slug: "openfoodfacts",
+    project_slug: "openfoodfacts-android",
+    version: PACKAGE_NAME + "@" + versionName.to_s + "+" + versionCode.to_s,
+  )
 end

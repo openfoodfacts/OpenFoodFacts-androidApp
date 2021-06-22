@@ -25,14 +25,19 @@ fastlane screenshots
 fastlane capture_screen
 ```
 Capture Screen
+### build_for_screengrab
+```
+fastlane build_for_screengrab
+```
+Build debug and test APK for screenshots
 ### release
 ```
 fastlane release
 ```
 Create a release and upload to internal channel of playstore
-### daily
+### finalize_sentry
 ```
-fastlane daily
+fastlane finalize_sentry
 ```
 Check the version currently in production and mark it as "finalized"
 

@@ -1,8 +1,8 @@
 package openfoodfacts.github.scrachx.openfood.test
 
 import android.app.Activity
-import android.content.Context
 import android.util.Log
+import androidx.test.core.app.ApplicationProvider
 import androidx.preference.PreferenceManager
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
@@ -28,8 +28,8 @@ class ScreenshotActivityTestRule<T : Activity?>
     override fun beforeActivityLaunched() {
         try {
             runOnUiThread {
-                PrefManager(context).isFirstTimeLaunch = firstTimeLaunched
-                localeManager.saveLanguageToPrefs(
+                PrefManager(ApplicationProvider.getApplicationContext()).isFirstTimeLaunch = firstTimeLaunched
+                LocaleHelper.setContextLanguage(
                         InstrumentationRegistry.getInstrumentation().targetContext,
                         screenshotParameter!!.locale,
                 )
@@ -39,7 +39,6 @@ class ScreenshotActivityTestRule<T : Activity?>
             Assert.fail(throwable.message)
         }
         beforeActivityStartedAction?.invoke(this)
-
     }
 
     override fun afterActivityLaunched() {
@@ -55,9 +54,8 @@ class ScreenshotActivityTestRule<T : Activity?>
         }
     }
 
-    @JvmOverloads
-    fun takeScreenshot(suffix: String? = StringUtils.EMPTY) {
-        ScreenshotTaker().takeScreenshot(screenshotParameter!!, suffix!!, this)
+    private fun takeScreenshot(suffix: String = StringUtils.EMPTY) {
+        ScreenshotTaker.takeScreenshot(screenshotParameter!!, suffix, this)
     }
 
     companion object {

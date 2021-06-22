@@ -2,10 +2,9 @@ package openfoodfacts.github.scrachx.openfood
 
 import android.Manifest
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.util.Log
-import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.rule.GrantPermissionRule
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.testing.HiltAndroidRule
@@ -17,14 +16,13 @@ import openfoodfacts.github.scrachx.openfood.utils.LocaleManager
 import org.junit.AfterClass
 import org.junit.BeforeClass
 import org.junit.Rule
-import org.junit.runner.RunWith
 import java.util.*
 import javax.inject.Inject
 
 /**
  * Take screenshots...buil
  */
-@RunWith(AndroidJUnit4::class)
+//@RunWith(AndroidJUnit4::class)
 @HiltAndroidTest
 abstract class AbstractScreenshotTest {
 
@@ -32,12 +30,13 @@ abstract class AbstractScreenshotTest {
     @get:Rule
     var hiltRule = HiltAndroidRule(this)
 
-    @Rule
+    @get:Rule
     var permissionRule: GrantPermissionRule = GrantPermissionRule.grant(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.CHANGE_CONFIGURATION
     )
 
+#Start Unsure (merge conflict)
     @Inject
     @ApplicationContext
     lateinit var context: Context
@@ -61,13 +60,13 @@ abstract class AbstractScreenshotTest {
     }
 
     @SafeVarargs
+#End Unsure
     private fun startScreenshotActivityTestRules(
             screenshotParameter: ScreenshotParameter,
             activityRules: List<ScreenshotActivityTestRule<out Activity?>>,
-            intents: List<Intent?>,
-            context: Context
+            intents: List<Intent?>
     ) {
-        changeLocale(screenshotParameter, context)
+        changeLocale(screenshotParameter)
         activityRules.forEach { activityRule ->
             intents.forEach { intent ->
                 activityRule.finishActivity()
@@ -79,19 +78,17 @@ abstract class AbstractScreenshotTest {
         }
     }
 
-    @Suppress("DEPRECATION")
-    private fun changeLocale(parameter: ScreenshotParameter, context: Context) {
+    private fun changeLocale(parameter: ScreenshotParameter) {
         Log.d(LOG_TAG, "Change parameters to $parameter")
-        localeManager.saveLanguageToPrefs(context, parameter.locale)
+        LocaleHelper.setContextLanguage(ApplicationProvider.getApplicationContext(), parameter.locale)
     }
 
     protected fun startForAllLocales(
             filter: (ScreenshotParameter) -> List<Intent?> = { listOf(null) },
-            rules: List<ScreenshotActivityTestRule<out Activity?>>,
-            context: Context
+            rules: List<ScreenshotActivityTestRule<out Activity?>>
     ) {
         getFilteredParameters().forEach {
-            startScreenshotActivityTestRules(it, rules, filter(it), context)
+            startScreenshotActivityTestRules(it, rules, filter(it))
         }
     }
 
