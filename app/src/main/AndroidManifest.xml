@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="openfoodfacts.github.scrachx.openfood"
-    android:installLocation="auto">
+    android:installLocation="auto"> <!-- Merging strategy for the imported manifests -->
+    <uses-sdk tools:overrideLibrary="io.sentry.android" />
 
     <!-- Add permission to query apps for CustomTabs -->
     <queries>
@@ -17,21 +18,13 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <!-- Merging strategy for the imported manifests -->
-    <uses-sdk tools:overrideLibrary="io.sentry.android" />
-
-    <!-- Support for Chromebooks -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Support for Chromebooks -->
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
-        android:required="true" />
-
-
-    <!-- Support for Amazon devices, and devices with no camera -->
+        android:required="true" /> <!-- Support for Amazon devices, and devices with no camera -->
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -50,16 +43,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/OFFTheme.NoActionBar">
+        <activity
+            android:name=".features.SignUpActivity"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="io.sentry.dsn"
             android:value="https://8f319aafd66343a191a0cf3ad09d1d7b@o241488.ingest.sentry.io/5276851" />
         <meta-data
             android:name="io.sentry.session-tracking.enable"
-            android:value="true" />
-        <meta-data android:name="io.sentry.auto-init" android:value="false" />
-
-        <!-- 18:9 aspect ratio support -->
+            android:value="true" /> <!-- 18:9 aspect ratio support -->
+      <!--<meta-data android:name="io.sentry.auto-init" android:value="false" />-->
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
@@ -73,7 +67,6 @@
         <provider
             android:name=".utils.SearchSuggestionProvider"
             android:authorities="${applicationId}.utils.SearchSuggestionProvider" />
-
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"
@@ -100,15 +93,18 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
-
             <intent-filter android:label="@string/intent_filter_share_label">
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
             <intent-filter android:label="@string/intent_filter_share_label">
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
 
@@ -121,7 +117,6 @@
             android:launchMode="singleTop"
             android:parentActivityName=".features.MainActivity"
             android:windowSoftInputMode="stateUnchanged|adjustResize">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".features.MainActivity" />
@@ -264,6 +259,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".features.MainActivity" />
+
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -271,9 +267,7 @@
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
-
         </activity>
-
         <activity
             android:name=".features.scan.ContinuousScanActivity"
             android:screenOrientation="portrait"
@@ -284,7 +278,6 @@
             android:theme="@style/OFFTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".features.product.view.CalculateDetailsActivity" />
-
         <activity
             android:name=".features.productlists.ProductListsActivity"
             android:parentActivityName=".features.MainActivity"

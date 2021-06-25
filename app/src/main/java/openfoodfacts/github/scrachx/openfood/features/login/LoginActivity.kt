@@ -221,6 +221,11 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun doRegister() {
+        // uncomment the below lines for native sign-up activity
+        // startActivity(Intent(this,SignUpActivity::class.java))
+        // finish()
+
+        // comment the below lines if using native sign-up activity
         val customTabsIntent = CustomTabsHelper.getCustomTabsIntent(this, customTabActivityHelper.session)
         CustomTabActivityHelper.openCustomTab(this, customTabsIntent, userLoginUri, WebViewFallback())
     }

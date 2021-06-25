@@ -909,6 +909,22 @@
     <string name="txtHomeOnline">Open Food Facts is an open database of more than %1$s food products (plus the ones you will contribute).</string>
     <string name="enabled">Enabled</string>
 
+    <!-- Strings related to SignUp -->
+    <string name="signupName">Display name</string>
+    <string name="signupUsername">Username</string>
+    <string name="hintSignup">E-mail</string>
+    <string name="hintConfirmPass">Confirm Password</string>
+    <string name="signup">Sign up</string>
+    <string name="confirm_password_error">Passwords do not match</string>
+    <string name="tos">I agree to the Open Food Facts terms of use and contribution.</string>
+    <string name="invalid_email">Enter a valid email</string>
+    <string name="username_condition">Username cannot contain spaces, caps or special characters.</string>
+    <string name="foodProducer">I am a food producer.</string>
+    <string name="subsNewsLetter">I\'d like to subscribe to the Open Food Facts newsletter (Note: You can unsubscribe from it at any time).</string>
+    <string name="acceptTos">You need to accept the terms of use and contribution if you want to create an Open Food Facts account</string>
+    <string name="tos_url" translatable="false">https://world.openfoodfacts.org/terms-of-use</string>
+    <string name="producerName">Producer/Brand</string>
+
     <!-- Application theme settings -->
     <string name="follow_system">Follow system</string>
     <string name="day">Day</string>
