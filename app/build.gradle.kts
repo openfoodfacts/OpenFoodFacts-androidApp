@@ -201,7 +201,7 @@ dependencies {
         exclude(module = "recyclerview-v7")
     }
     androidTestImplementation("com.jraska:falcon:2.2.0")
-    androidTestImplementation("tools.fastlane:screengrab:1.2.0")
+    androidTestImplementation("tools.fastlane:screengrab:2.1.0")
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesVersion}")
 
 
