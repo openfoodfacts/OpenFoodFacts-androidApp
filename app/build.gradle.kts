@@ -222,7 +222,7 @@ android {
     defaultConfig {
         applicationId = "openfoodfacts.github.scrachx.openfood"
 
-        minSdkVersion(16)
+        minSdkVersion(18)
         targetSdkVersion(30)
 
         versionCode = 433
