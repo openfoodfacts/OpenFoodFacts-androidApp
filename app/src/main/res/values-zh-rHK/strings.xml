@@ -161,7 +161,7 @@
     <string name="txtEMB">Traceability codes:</string>
     <string name="txtIngredients">成分：</string>
     <string name="Donate">捐款</string>
-    <string name="Donation">Click here to donate to Open Food Facts</string>
+    <string name="Donation">Click here to donate to Open Products Facts</string>
     <string name="txtSubstances">致敏或不適的物質和產品：</string>
     <string name="txtAdditives">添加劑：</string>
     <string name="txtTraces">含少量：</string>
@@ -189,7 +189,7 @@
     <string name="uploadLater">圖片會在連接網絡後上載</string>
     <string name="txtInfoLoginOk">使用者已儲存</string>
     <string name="txtInfoLoginNo">使用者未被儲存</string>
-    <string name="txtDialogsContent">The product you scanned does not exist yet in Open Food Facts. Please add it.</string>
+    <string name="txtDialogsContent">The product you scanned does not exist yet in Open Products Facts. Please add it.</string>
     <string name="txtYes">是</string>
     <string name="txtNo">否</string>
     <string name="hintBrand">品牌</string>
@@ -203,7 +203,7 @@
     <string name="txtBarcodeRequire">需要條碼</string>
     <string name="txtOk">確定</string>
     <string name="txtBarcodeNotValid">條碼無效</string>
-    <string name="msg_share">Look at this product on Open Food Facts :</string>
+    <string name="msg_share">Look at this product on Open Products Facts :</string>
     <string name="create_account">註冊</string>
     <string name="home_drawer">首頁</string>
     <string name="install">安裝</string>
@@ -305,7 +305,7 @@
     <string name="txt_no_matching_incomplete_products">我們沒有任何欠缺資料的產品！您要加入新產品嗎？</string>
     <string name="txt_no_matching_contributor_products">糟糕，我們沒有此編輯者沒有加入任何產品，你可以加入產品嗎？</string>
     <string name="txt_no_matching_products">我們找不到相關產品。\n您可以嘗試：</string>
-    <string name="txt_broaden_search">- broadening your search \n- scan and add it to Open Food Facts</string>
+    <string name="txt_broaden_search">- broadening your search \n- scan and add it to Open Products Facts</string>
     <string name="something_went_wrong">抱歉，發生錯誤了……</string>
     <string name="txt_try_again">再試一次</string>
     <string name="nutrition_lactose">乳糖</string>
@@ -425,7 +425,7 @@
     <string name="dismiss">關閉</string>
     <string name="donation_url">https://donate.openfoodfacts.org</string>
     <!--Just replace "world" by "fr", "de"… translate the "terms-of-use" with the hyphens -->
-    <string name="terms_url">https://world.openfoodfacts.org/terms-of-use</string>
+    <string name="terms_url">https://world.openproductsfacts.org/terms-of-use</string>
     <!--Just replace "world" by "world-fr", "world-de"… do not translate "faq" -->
     <string name="faq_url">https://world.openfoodfacts.org/faq</string>
     <!--Just replace "world" by "world-fr", "world-de"… do not translate "hunger-game" -->
@@ -527,7 +527,7 @@
     </plurals>
     <string name="product_not_complete">This product is not yet complete. \nCan you add some details?</string>
     <string name="addProductOffline">You seem offline. Add the product %s using the offline mode ?</string>
-    <string name="product_not_found">The product %1$s you scanned does not exist yet in Open Food Facts. Can you add it?</string>
+    <string name="product_not_found">The product %1$s you scanned does not exist yet in Open Products Facts. Can you add it?</string>
     <string name="scan_sound">掃描聲效</string>
     <string name="trouble_scanning">不能掃描？</string>
     <string name="barcode_hint">不能掃描？輸入條碼</string>
@@ -629,7 +629,7 @@
     <string name="contribution_by">Contribution by</string>
     <string name="title_activity_product">標題</string>
     <string name="description_activity_product">描述</string>
-    <string name="intent_filter_share_label">Add to Open Food Facts</string>
+    <string name="intent_filter_share_label">Add to Open Products Facts</string>
     <!-- Used for additive exposure evaluation table -->
     <string name="overexposure_high">極容易過量攝取</string>
     <string name="overexposure_moderate">較容易過量攝取</string>
@@ -666,7 +666,7 @@
     <string name="add_labels_prompt_text">The Eco-Score takes into account environmental labels. Please take them into photo or edit the product so that they can be taken into account</string>
     <string name="add_origins_prompt_text">The Eco-Score takes into account the origins of the ingredients. Please take them into photo (ingredient list and/or any geographic claim) or edit the product so that they can be taken into account</string>
     <string name="category_game_btn">協助分類產品</string>
-    <string name="version_string">Open Food Facts Android App</string>
+    <string name="version_string">Open Products Facts Android App</string>
     <string name="set_ingredient_img">Set as ingredients image</string>
     <string name="set_img_nutrients">Set as nutrition image</string>
     <string name="set_img_front">Set as front image</string>
@@ -799,11 +799,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">獲取Nutri-Score</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

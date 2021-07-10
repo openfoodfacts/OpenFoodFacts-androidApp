@@ -60,7 +60,7 @@
         <item>Složení</item>
         <item>Výživové údaje</item>
         <item>Výživové údaje</item>
-        <item>Prostředí</item>
+        <item>Životní prostředí</item>
     </string-array>
     <!-- New Nav Drawer Product Menu Items -->
     <string-array name="nav_drawer_new_items_product">
@@ -298,7 +298,7 @@
     <string name="nutrition_trans_fat">Trans-tuky</string>
     <string name="nutriment_serving_size">Na jednu porci : </string>
     <string name="action_manage_account">Spravovat účet</string>
-    <string name="action_contributes">Vaše příspěvky</string>
+    <string name="action_contributes">Příspěvky</string>
     <string name="choose_energy_unit">Vyberte výchozí jednotku energie pro výživovou tabulku</string>
     <string name="choose_volume_unit">Vyberte výchozí jednotku objemu pro výživovou tabulku</string>
     <string name="logout_drawer">Odhlásit se</string>
@@ -458,12 +458,12 @@
     <string name="preference_header_network">Síť</string>
     <string name="preference_header_contributing">Přispívá</string>
     <string name="preference_header_privacy">Soukromí</string>
-    <string name="preference_crash_title">Crash reporting</string>
-    <string name="preference_crash_summary">When enabled, crash reports will be sent to the Open Food Facts server automatically, so that we can fix bugs and improve the app.</string>
+    <string name="preference_crash_title">Hlášení o pádu</string>
+    <string name="preference_crash_summary">Pokud je povoleno, zprávy o pádech budou automaticky odeslány na server Open Food Facts, abychom mohli opravit chyby a vylepšit aplikaci.</string>
     <string name="preference_analytics_title">Odeslat anonymní data</string>
-    <string name="preference_analytics_summary">When enabled, some anonymous information regarding app usage will be sent to the Open Food Facts servers, so that we can understand how and how much features are used in order to improve them.</string>
+    <string name="preference_analytics_summary">Pokud je povoleno, některé anonymní informace o používání aplikace a jejích funkcích budou odeslány na server Open Food Facts, abychom mohli aplikaci dále vylepšovat.</string>
     <string name="preference_analytics_bottom_sheet_title">Odeslat anonymní data</string>
-    <string name="preference_analytics_bottom_sheet_description">Help improve Open Food Facts by letting us know how you use it. Data collected is anonymous. This option can be disabled at any time in the settings section.</string>
+    <string name="preference_analytics_bottom_sheet_description">Pomozte zlepšit Open Food Facts tím, že nám dáte vědět, jak aplikaci používáte. Odeslaná data jsou anonymní. Tuto možnost můžete kdykoliv zakázat v nastavení.</string>
     <string name="preference_analytics_bottom_sheet_grant_button">Udělit</string>
     <string name="preference_analytics_bottom_sheet_decline_button">Odmítnout</string>
     <string name="scan_first_string">Historie prohlédnutých výrobků se zobrazí tady.\nTato historie je důvěrná, data zůstávají pouze ve vašem zařízení.</string>
@@ -514,15 +514,15 @@
     <string name="products_added">Produkty, které jste přidali nebo upravili</string>
     <string name="products_incomplete">Produkty, které jste přidali, a je třeba je dokončit</string>
     <string name="product_pictures_contributed">Výrobky které jste vyfotili</string>
-    <string name="picture_contributed_incomplete">Products you took pictures for that need to be completed</string>
+    <string name="picture_contributed_incomplete">Výrobky, které jste vyfotili a je třeba je dokončit</string>
     <string name="product_info_added">Produkty, pro které jste přidali informace</string>
-    <string name="product_info_tocomplete">Products you added information for that need to be completed</string>
+    <string name="product_info_tocomplete">Výrobky, ke kterým jste přidali informace a je třeba je dokončit</string>
     <string name="show_by">Zobrazit</string>
     <string name="notify_title">Export dokončen</string>
     <string name="notify_content">Kliknutím zobrazíte exportované výrobky</string>
     <string name="notification_channel_name">Exportovat oznámení</string>
     <string name="notify_channel_description">Oznámení pro zobrazení umístění exportovaného souboru</string>
-    <string name="products_to_be_completed">Výrobky k dokončení</string>
+    <string name="products_to_be_completed">Nedokončené</string>
     <string name="offline_notification_title">Offline příspěvky, které je potřeba poslat</string>
     <string name="creator_history">Product added on %1$s at %2$s CET by %3$s</string>
     <string name="last_editor_history">Last edit of product page on %1$s at %2$s CEST by %3$s </string>
@@ -531,7 +531,7 @@
     <string name="incomplete_states">Incomplete States</string>
     <string name="complete_states">Complete States</string>
     <string name="contribution_tab">Příspěvky</string>
-    <string name="synthesis_tab">Synthesis</string>
+    <string name="synthesis_tab">Přehled</string>
     <string name="txtDialogsTitle">Informace</string>
     <string name="offline_product_addition_title">Přidat nový výrobek</string>
     <string name="productNameNull">Neznámé jméno</string>
@@ -694,13 +694,13 @@
     <string name="txtConnectionError">Některá data se nepodařilo stáhnout. To může být způsobeno chybou připojení.</string>
     <string name="set_image_name">Snímek byl úspěšně nastaven jako</string>
     <string name="addtive_search">Search for a additive</string>
-    <string name="additives">Přísady</string>
+    <string name="additives">Aditiva</string>
     <!--used for product_lists implementation-->
     <string name="add_to_product_lists">Přidat na seznam</string>
     <string name="txt_create_new_list">Vytvořit nový seznam</string>
     <string name="txt_add_to_new_list">Přidat na nový</string>
     <string name="create_new_list_list_name">Název seznamu</string>
-    <string name="txt_eaten_products">Products I have</string>
+    <string name="txt_eaten_products">Snězeno</string>
     <string name="txt_products_to_buy">Nákupní seznam</string>
     <string name="txt_exporting_your_listed_products">Exporting Your Products…</string>
     <string name="txt_your_listed_products_exported">Your products have been exported</string>
@@ -817,11 +817,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
-    <string name="title_welcome_nutriscore">Získejte Nutriční skóre</string>
+    <string name="title_welcome_nutriscore">Zjistěte Nutri-Score</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

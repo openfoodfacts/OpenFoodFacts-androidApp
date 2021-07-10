@@ -426,7 +426,7 @@
     <string name="dismiss">Verwerfen</string>
     <string name="donation_url">https://donate.openfoodfacts.org</string>
     <!--Just replace "world" by "fr", "de"… translate the "terms-of-use" with the hyphens -->
-    <string name="terms_url">https://world.openfoodfacts.org/terms-of-use</string>
+    <string name="terms_url">https://world-de.openfoodfacts.org/terms-of-use</string>
     <!--Just replace "world" by "world-fr", "world-de"… do not translate "faq" -->
     <string name="faq_url">https://world.openfoodfacts.org/faq</string>
     <!--Just replace "world" by "world-fr", "world-de"… do not translate "hunger-game" -->
@@ -801,11 +801,14 @@ Sie können außerdem Produkte zu dieser Liste hinzufügen, indem Sie sie durchs
     <string name="changelog_translation_help">Möchten Sie dieses Änderungsprotokoll in %s anzeigen?\nSchließen Sie sich dem Übersetzungsteam an!</string>
     <string name="whats_new">Was gibt es Neues bei Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Machen Sie mit, bei der Lebensmittel-Revolution</string>
     <string name="msg_welcome_intro">Erfassen Sie Lebensmittel, nehmen Sie Fotos auf, helfen Sie mit, das Lebensmittelsystem zu verändern</string>
     <string name="title_welcome_nutriscore">„Nutri-Score” (franz. Nahrungsmittelampel) abrufen</string>
     <string name="msg_welcome_nutriscore">Eine einfache Übersicht die Nährwertqualität Ihrer Lebensmittel</string>
     <string name="title_welcome_nova">Vermeiden Sie hochverarbeitete Lebensmittel</string>
     <string name="msg_welcome_nova">Reduzieren Sie die Menge an hochverarbeiteten Lebensmitteln in Ihrer Ernährung.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">Eine Übersicht über die Umweltauswirkungen Ihrer Lebensmittel.</string>
+    <string name="title_welcome_matomo">Anonymisierte Analysedaten senden</string>
+    <string name="msg_welcome_matomo">Helfen Sie den Freiwilligen von Open Food Facts, die App zu verbessern. Sie entscheiden, ob Sie anonymisierte Analysedaten senden möchten.\n\nWenn Sie Ihre Meinung ändern, kann diese Option jederzeit in den Einstellungen geändert werden.</string>
 </resources>

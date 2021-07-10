@@ -817,11 +817,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">Co nowego w Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Dołącz do rewolucji żywieniowej</string>
     <string name="msg_welcome_intro">Skanuj jedzenie, rób zdjęcia, pomóż przekształcić system żywnościowy</string>
     <string name="title_welcome_nutriscore">Poznaj skalę Nutri_Score</string>
     <string name="msg_welcome_nutriscore">Prosta synteza jakości odżywczej Twojego jedzenia</string>
     <string name="title_welcome_nova">Unikaj ultra przetworzonej żywności</string>
     <string name="msg_welcome_nova">Zmniejsz ilość ultra przetworzonej żywności w swojej diecie.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

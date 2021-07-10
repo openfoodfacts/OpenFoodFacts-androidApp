@@ -583,7 +583,7 @@
     <string name="extracting_ingredients">Trích xuất nguyên liệu</string>
     <string name="looksGood">Có vẻ tốt</string>
     <string name="skip_ingredients">Quá xấu \n Bỏ qua thành phần</string>
-    <string name="traces">Trace</string>
+    <string name="traces">Traces</string>
     <string name="traces_hint">Cho biết các thành phần từ các đề cập như \'Có thể chứa dấu vết\', \'Được sản xuất tại nhà máy cũng sử dụng\', v. v. \nVí dụ: Sữa, Gluten, Nuts</string>
     <string name="nutrition_facts_not_specified">Thành phần dinh dưỡng không được chỉ định trên sản phẩm.</string>
     <string name="nutrition_facts_picture">Nutrition Facts photo</string>
@@ -799,11 +799,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">Lấy điểm Nutri-Score</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

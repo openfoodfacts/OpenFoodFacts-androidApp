@@ -10,29 +10,29 @@
     <string name="website_product">https://world-cs.openfoodfacts.org/product/</string>
     <!-- For fr, Replace by https://world-fr.openfoodfacts.org/contributeur/ -->
     <string name="website_contributor">https://world-cs.openfoodfacts.org/contributor/</string>
-    <string name="txtHome">Open Food Facts je otevřená databáze potravinářských produktů s přísadami, alergeny, nutričními fakty a všemi informacemi, které můžeme nalézt na etiketách produktů.</string>
+    <string name="txtHome">Open Food Facts je otevřená databáze potravin.</string>
     <!-- Old onboarding slides -->
-    <string name="slide_1_title">Přispěte k transparenci potravin</string>
-    <string name="slide_1_desc">Nasnímejte zboží, vyfoťte ho, zajistěte transparentnost potravin</string>
+    <string name="slide_1_title">Přispějte k transparentnosti potravin</string>
+    <string name="slide_1_desc">Naskenujte zboží, vyfoťte ho, zlepšete transparentnost potravin</string>
     <string name="slide_2_title">Získejte fakta</string>
     <string name="slide_2_desc">Extensive information about the product you\'ve scanned, deciphered for you</string>
-    <string name="slide_3_title">Získejte Nutriční skóre</string>
+    <string name="slide_3_title">Zjistěte Nutri-Score</string>
     <string name="slide_3_desc">A synthetic view of the nutritional properties of your favorite food products</string>
     <string name="slide_4_title">Pracuje offline</string>
     <string name="slide_4_desc">You can add new products, even if you don\'t have an Internet connection right now</string>
     <!-- New onboarding-->
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
-    <string name="title_welcome_nutriscore">Získejte Nutriční skóre</string>
+    <string name="title_welcome_nutriscore">Zjistěte Nutri-Score</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
     <string name="title_welcome_ecoscore">Eco-Score</string>
     <!-- Scan card -->
     <string name="txtDialogsContent">Produkt, který jste naskenovali, v databázi Open Food Facts neexistuje. Přidejte jej prosím.</string>
-    <string name="txtDialogsContentPowerMode">Produkt, který jste naskenovali, již existuje v databázi Open Food Facts.</string>
+    <string name="txtDialogsContentPowerMode">Výrobek, který jste naskenovali, už je v databázi Open Food Facts.</string>
     <string name="msg_share">Podívejte se na tento produkt v Open Food Facts :</string>
-    <string name="not_support_books">Knihy nejsou aktuálně podporovány Open Food Facts</string>
+    <string name="not_support_books">Knihy zatím nejsou databází Open Food Facts podporovány</string>
     <string name="txt_broaden_search">- broadening your search \n- scan and add it to Open Food Facts</string>
     <string name="Donation">Kliknutím zde můžete podpořit Open Food Facts</string>
     <string name="text_offline_info_dialog">Scan the products even when you are offline so as to add them to Open Food Facts later. The scanned products will appear here and you will be able to send them using the button below.</string>
@@ -40,5 +40,5 @@
     <!-- OFF tagline in different languages -->
     <string name="tagline">svobodná databáze potravin</string>
     <string name="product_not_found">The product %1$s you scanned does not exist yet in Open Food Facts. Can you add it?</string>
-    <string name="currently_on_version">Současně na Open Food Facts</string>
+    <string name="currently_on_version">Aktuálně v Open Food Facts</string>
 </resources>

@@ -802,11 +802,14 @@
     <string name="changelog_translation_help">Vuoi vedere questo log delle modifiche in %s?\nUnisciti al team di traduzione!</string>
     <string name="whats_new">Cosa c\'è di nuovo con Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Unisciti alla rivoluzione alimentare</string>
     <string name="msg_welcome_intro">Scansiona gli alimenti, scatta foto, aiuta a trasformare il sistema alimentare</string>
     <string name="title_welcome_nutriscore">Ottieni il Nutri-Score</string>
     <string name="msg_welcome_nutriscore">Una semplice sintesi delle qualità nutrizionali dei tuoi alimenti</string>
     <string name="title_welcome_nova">Evita gli alimenti ultra-processati</string>
     <string name="msg_welcome_nova">Riduci la quantità di alimenti ultra-processati nella tua dieta.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">Una sintesi dell\'impatto ambientale del tuo cibo.</string>
+    <string name="title_welcome_matomo">Invia analitiche anonime</string>
+    <string name="msg_welcome_matomo">Aiuta i volontari di Open Food Facts per migliorare l\'app. Decidi se inviare analitiche anonime.\n\nSe cambi idea, quest\'opzione è abilitabile e disabilitabile in ogni momento dalle impostazioni.</string>
 </resources>

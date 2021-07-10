@@ -571,7 +571,7 @@
     <string name="product_uploaded_successfully">crwdns179028:0crwdne179028:0</string>
     <string name="no_internet_connection">crwdns179030:0crwdne179030:0</string>
     <string name="no_internet_unable_to_extract_ingredients">crwdns179032:0crwdne179032:0</string>
-    <string name="percent">crwdns179034:0%1$dcrwdnd179034:0%%crwdne179034:0</string>
+    <string name="percent">crwdns179034:0%1$dcrwdne179034:0</string>
     <string name="overview">crwdns179036:0crwdne179036:0</string>
     <string name="ingredients">crwdns179038:0crwdne179038:0</string>
     <string name="nutrition_facts">crwdns179040:0crwdne179040:0</string>
@@ -800,11 +800,14 @@
     <string name="changelog_translation_help">crwdns179470:0%scrwdne179470:0</string>
     <string name="whats_new">crwdns179472:0crwdne179472:0</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">crwdns181760:0crwdne181760:0</string>
-    <string name="title_welcome_intro">crwdns181762:0crwdne181762:0</string>
-    <string name="msg_welcome_intro">crwdns181764:0crwdne181764:0</string>
-    <string name="title_welcome_nutriscore">crwdns181766:0crwdne181766:0</string>
-    <string name="msg_welcome_nutriscore">crwdns181768:0crwdne181768:0</string>
-    <string name="title_welcome_nova">crwdns181770:0crwdne181770:0</string>
-    <string name="msg_welcome_nova">crwdns181772:0crwdne181772:0</string>
+    <string name="title_welcome_intro">crwdns187464:0crwdne187464:0</string>
+    <string name="msg_welcome_intro">crwdns187466:0crwdne187466:0</string>
+    <string name="title_welcome_nutriscore">crwdns187468:0crwdne187468:0</string>
+    <string name="msg_welcome_nutriscore">crwdns187470:0crwdne187470:0</string>
+    <string name="title_welcome_nova">crwdns187472:0crwdne187472:0</string>
+    <string name="msg_welcome_nova">crwdns187474:0crwdne187474:0</string>
+    <string name="title_welcome_ecoscore">crwdns187476:0crwdne187476:0</string>
+    <string name="msg_welcome_ecoscore">crwdns187478:0crwdne187478:0</string>
+    <string name="title_welcome_matomo">crwdns187480:0crwdne187480:0</string>
+    <string name="msg_welcome_matomo">crwdns187482:0crwdne187482:0</string>
 </resources>

@@ -23,9 +23,9 @@
     <string name="slide_4_desc">Puedes agregar nuevos productos, incluso si no tienes una conexión de Internet al momento</string>
     <string name="txtDialogsContent">El producto que has escaneado aún no existe en Open Pet Food Facts. Por favor añádelo.</string>
     <string name="txtDialogsContentPowerMode">El producto que has escaneado ya existe en Open Pet Food Facts.</string>
-    <string name="msg_share">Échale un vistazo a este producto en Open Food Facts :</string>
+    <string name="msg_share">Mira este producto en Open Food Facts:</string>
     <string name="not_support_books">Open Food Facts no ofrece soporte para libros actualmente</string>
-    <string name="txt_broaden_search">ampliando tu búsqueda.. escanea y añádelo a Open Food Facts</string>
+    <string name="txt_broaden_search">- Ampliar tu búsqueda \n- Escanea y añádelo a Open Food Facts</string>
     <string name="Donation">Click aquí para hacer una donación a Open Food Facts</string>
     <string name="translate_help_title">Ayude a traducir Open Food Facts</string>
     <string name="translate_help_summary">Lleva la base de datos de Open Food Facts a tu idioma - no se requiere conocimiento técnico</string>

@@ -805,11 +805,14 @@
     <string name="changelog_translation_help">Quer ver este relatório de alterações em %s?\nJunte-se à equipa de tradução!</string>
     <string name="whats_new">O que há de novo no Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Junte-se à revolução alimentar</string>
     <string name="msg_welcome_intro">Digitalize alimentos, tire fotografias, ajude a transformar o sistema alimentar</string>
     <string name="title_welcome_nutriscore">Obtenha o Nutri-Score</string>
     <string name="msg_welcome_nutriscore">Uma síntese simples da qualidade nutricional da sua comida</string>
     <string name="title_welcome_nova">Evite alimentos ultraprocessados</string>
     <string name="msg_welcome_nova">Reduza a quantidade de alimentos ultraprocessados na sua dieta.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">Um resumo do impacto ambiental da sua alimentação.</string>
+    <string name="title_welcome_matomo">Enviar estatísticas anónimas</string>
+    <string name="msg_welcome_matomo">Ajude os voluntários do Open Food Facts a melhorar a aplicação. Decida se quer enviar estatísticas anónimas.\n\nSe mudar de ideia, esta opção pode ser ativada e desativada a qualquer momento nas configurações.</string>
 </resources>

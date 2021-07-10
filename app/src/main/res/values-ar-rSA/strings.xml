@@ -831,11 +831,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">الحصول على Nutriscore (مجموع نقاط التغذية)</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">تركيبة من الأثر البيئي لطعامك.</string>
+    <string name="title_welcome_matomo">إرسال تحليلات مجهولة</string>
+    <string name="msg_welcome_matomo">ساعد متطوعين Open Food Facts لتطوير التطبيق. لديك قرار في إرسال تحليلات مجهولة. إذا غيرت رأيك، هذا الخيار يمكن تمكينه وتعطيله في أي وقت من الإعدادات.</string>
 </resources>

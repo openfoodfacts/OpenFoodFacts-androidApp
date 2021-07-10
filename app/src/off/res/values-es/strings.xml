@@ -16,27 +16,27 @@
     <string name="slide_1_desc">Escanea los productos, sácales una foto y haz que la comida sea más transparente</string>
     <string name="slide_2_title">Conoce lo que te interesa</string>
     <string name="slide_2_desc">Información extensa acerca del producto que has escaneado, enterate</string>
-    <string name="slide_3_title">Obtener el Nutriscore</string>
+    <string name="slide_3_title">Obtener el Nutri-Score</string>
     <string name="slide_3_desc">Una visión sintética de las propiedades nutricionales de tus productos alimenticios favoritos</string>
     <string name="slide_4_title">Funciona sin conexión</string>
     <string name="slide_4_desc">Puedes agregar nuevos productos, incluso si no tienes una conexión de Internet al momento</string>
     <!-- New onboarding-->
     <string name="title_welcome_intro">Únete a la revolución alimentaria</string>
     <string name="msg_welcome_intro">Escanea alimentos, toma fotos, ayuda a transformar el sistema alimentario</string>
-    <string name="title_welcome_nutriscore">Obtener el Nutriscore</string>
+    <string name="title_welcome_nutriscore">Obtener el Nutri-Score</string>
     <string name="msg_welcome_nutriscore">Una síntesis simple de la calidad nutricional de tu comida</string>
-    <string name="title_welcome_nova">Evitar alimentos ultra procesados</string>
-    <string name="msg_welcome_nova">Reducir la cantidad de alimentos ultra procesados en tu dieta.</string>
+    <string name="title_welcome_nova">Evita alimentos ultra procesados</string>
+    <string name="msg_welcome_nova">Reduce la cantidad de alimentos ultra procesados en tu dieta.</string>
     <string name="title_welcome_ecoscore">Eco-Score</string>
     <!-- Scan card -->
     <string name="txtDialogsContent">El producto que escaneó aún no existe en Open Food Facts. Por favor agrégalo.</string>
     <string name="txtDialogsContentPowerMode">El producto que has escaneado ya existe en Open Food Facts.</string>
-    <string name="msg_share">Échale un vistazo a este producto en Open Food Facts :</string>
+    <string name="msg_share">Mira este producto en Open Food Facts:</string>
     <string name="not_support_books">Open Food Facts no ofrece soporte para libros actualmente</string>
-    <string name="txt_broaden_search">ampliando tu búsqueda.. escanea y añádelo a Open Food Facts</string>
+    <string name="txt_broaden_search">- Ampliar tu búsqueda \n- Escanea y añádelo a Open Food Facts</string>
     <string name="Donation">Click aquí para hacer una donación a Open Food Facts</string>
     <string name="text_offline_info_dialog">Escanea los productos incluso cuando estés sin conexión para agregarlos posteriormente a Open Food Facts. Los productos escaneados aparecerán aquí y podrás enviarlos usando el botón de abajo.</string>
-    <string name="warning_alert_data" tools:ignore="StringFormatInvalid">La información de tus alergias no se enviará al servidor de Open Food Facts. así que debes ser cuidadoso ya que la información del producto no puede ser fidedigna, y la detección puede que no sea 100% arecisa, ¡así que chequea más de una vez por ti mismo! </string>
+    <string name="warning_alert_data" tools:ignore="StringFormatInvalid">La información de tus alergias jamás se enviará al servidor de Open Food Facts. Por eso, debes ser cuidadoso ya que la información del producto, y la detección puede que no sea 100% precisa, ¡así que, chequea más de una vez por ti mismo!</string>
     <!-- OFF tagline in different languages -->
     <string name="tagline">la base de datos libre sobre productos alimenticios</string>
     <string name="product_not_found">El producto %1$s que has escaneado aún no esta en el inventario de Open Food Facts, ¿puedes añadirlo?</string>

@@ -22,7 +22,7 @@
     <string name="slide_4_desc">ניתן להוסיף מוצרים חדשים, אפילו אם אין לך חיבור לאינטרנט כרגע</string>
     <!-- New onboarding-->
     <string name="title_welcome_intro">מזמינים אותך להצטרף למהפכת המזון</string>
-    <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
+    <string name="msg_welcome_intro">סורקים מזון, מצלמים תמונות ומסייעים בשינוי מערכת המזון</string>
     <string name="title_welcome_nutriscore">מה ה־Nutri-Score</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">הימנעות ממזון מעובד מאוד</string>
