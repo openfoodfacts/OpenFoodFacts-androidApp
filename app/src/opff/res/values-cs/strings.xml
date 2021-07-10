@@ -24,10 +24,10 @@
     <string name="txtDialogsContent">The product you scanned does not exist yet in Open Pet Food Facts. Please add it.</string>
     <string name="txtDialogsContentPowerMode">Produkt, který jste naskenovali, již existuje v Open Pet Food Facts.</string>
     <string name="msg_share">Podívejte se na tento produkt v Open Food Facts :</string>
-    <string name="not_support_books">Knihy nejsou aktuálně podporovány Open Food Facts</string>
+    <string name="not_support_books">Knihy zatím nejsou databází Open Food Facts podporovány</string>
     <string name="txt_broaden_search">- broadening your search \n- scan and add it to Open Food Facts</string>
     <string name="Donation">Kliknutím zde můžete podpořit Open Food Facts</string>
-    <string name="translate_help_title">Pomozte přeložit Open Food Facts</string>
+    <string name="translate_help_title">Pomozte s překladem Open Food Facts</string>
     <string name="translate_help_summary">Přineste databázi Open Food Facts do vašeho jazyka - nejsou na to třeba žádné technické znalosti</string>
     <string name="text_offline_info_dialog">Scan the products even when you are offline so as to add them to Open Pet Food Facts later. The scanned products will appear here and you will be able to send them using the button below.</string>
     <string name="warning_alert_data" tools:ignore="StringFormatInvalid">Informace o vašich alergiích nebudou nikdy odeslány na server Open Food Facts. Také mějte na paměti že informace o produktech nemusejí být přesné, a detekce nemusí být 100 % ařesné, vše prosím sami dvakrát zkontrolujte! </string>

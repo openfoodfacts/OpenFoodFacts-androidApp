@@ -29,16 +29,16 @@
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
     <string name="title_welcome_ecoscore">Eco-Score</string>
     <!-- Scan card -->
-    <string name="txtDialogsContent">The product you scanned does not exist yet in Open Products Facts. Please add it.</string>
+    <string name="txtDialogsContent">The product you scanned does not exist yet in Open Food Facts. Please add it.</string>
     <string name="txtDialogsContentPowerMode">The product you scanned already exists in Open Food Facts.</string>
-    <string name="msg_share">Look at this product on Open Products Facts :</string>
+    <string name="msg_share">Look at this product on Open Food Facts:</string>
     <string name="not_support_books">Books are not currently supported by Open Food Facts</string>
-    <string name="txt_broaden_search">- broadening your search \n- scan and add it to Open Products Facts</string>
-    <string name="Donation">Click here to donate to Open Products Facts</string>
+    <string name="txt_broaden_search">- broadening your search \n- scan and add it to Open Food Facts</string>
+    <string name="Donation">Click here to donate to Open Food Facts</string>
     <string name="text_offline_info_dialog">Scan the products even when you are offline so as to add them to Open Food Facts later. The scanned products will appear here and you will be able to send them using the button below.</string>
-    <string name="warning_alert_data" tools:ignore="StringFormatInvalid">Your allergies info will never be sent to the Open Food Facts server. Also, be careful that product data may not be accurate, and detection might not be 100% accurate, so please double-check by yourself! </string>
+    <string name="warning_alert_data" tools:ignore="StringFormatInvalid">Your allergies info will never be sent to the Open Food Facts server. Also, be careful that product data may not be accurate, and detection might not be 100% accurate, so please double-check by yourself!</string>
     <!-- OFF tagline in different languages -->
     <string name="tagline">the free food products database</string>
-    <string name="product_not_found">The product %1$s you scanned does not exist yet in Open Products Facts. Can you add it?</string>
+    <string name="product_not_found">The product %1$s you scanned does not exist yet in Open Food Facts. Can you add it?</string>
     <string name="currently_on_version">Currently on Open Food Facts</string>
 </resources>

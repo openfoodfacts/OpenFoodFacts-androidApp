@@ -664,7 +664,7 @@
     <!-- Used for additive exposure evaluation table -->
     <string name="extract_ingredients_prompt">Extract ingredients</string>
     <string name="extract_recycling_prompt">Extract recycling instructions</string>
-    <string name="add_nutrient_prompt_text">Add nutrition facts to compute the Nutri-Score</string>
+    <string name="add_nutrient_prompt_text">Engade datos nutricionais para calcular o Nutri-Score</string>
     <string name="add_category_prompt_text">Add a category to help complete the product</string>
     <string name="add_nutrient_category_prompt_text">Add a category and nutrition facts to help complete the product</string>
     <string name="couldnot_compute_ecoscore_prompt_text">We could not compute an Eco-Score for this product. It might be that the category is not specific enough or that we don\'t have supporting data for this category. If you believe this is an error, you can mail us by clicking below.</string>
@@ -707,7 +707,7 @@
     <string name="empty"></string>
     <string name="add_product">Engadir produtos</string>
     <string name="add_another_product">Add another product</string>
-    <string name="add_nutrition_facts_for_nutriscore">Add nutrition facts to compute the Nutri-Score</string>
+    <string name="add_nutrition_facts_for_nutriscore">Engade datos nutricionais para calcular o Nutri-Score</string>
     <string name="product_summary_action_compare_button_label">Compare</string>
     <string name="product_summary_action_add_to_list_button_label">Add to list</string>
     <string name="product_summary_action_edit_button_label">Editar</string>
@@ -805,11 +805,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">Obteña o Nutriscore</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

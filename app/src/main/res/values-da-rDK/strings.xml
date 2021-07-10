@@ -805,11 +805,14 @@
     <string name="changelog_translation_help">Ønsker at se denne ændringslog i %s?\nDeltag i oversættelsesteamet!</string>
     <string name="whats_new">Nyt i Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Øko-Score</string>
     <string name="title_welcome_intro">Tilslut dig fødevarerevolutionen</string>
     <string name="msg_welcome_intro">Skan fødevarer, tag fotos, hjælp med at traneformere fødevaresystemet</string>
     <string name="title_welcome_nutriscore">Få ernæringsinformation</string>
     <string name="msg_welcome_nutriscore">En simpel syntese af dine fødevarers ernæringskvalitet</string>
     <string name="title_welcome_nova">Undgå ultraforarbejdede fødevarer</string>
     <string name="msg_welcome_nova">Reducér mængden af ultraforarbejdede fødevarer i din kost.</string>
+    <string name="title_welcome_ecoscore">Øko-Score</string>
+    <string name="msg_welcome_ecoscore">En syntese af din mads miljøpåvirkning.</string>
+    <string name="title_welcome_matomo">Indsend anonyme analysedata</string>
+    <string name="msg_welcome_matomo">Hjælp OFF-frivillige med at forbedre appen. Du kan tillade indsendelse af anonyme analysdata\n\nDette kan når som helst aktiveres/deaktiveres via indstillingerne.</string>
 </resources>

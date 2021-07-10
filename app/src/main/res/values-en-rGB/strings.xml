@@ -208,7 +208,7 @@
     <string name="txtBarcodeRequire">Barcode required</string>
     <string name="txtOk">OK</string>
     <string name="txtBarcodeNotValid">Barcode Invalid</string>
-    <string name="msg_share">Look at this product on Open Food Facts :</string>
+    <string name="msg_share">Look at this product on Open Food Facts:</string>
     <string name="create_account">Sign up</string>
     <string name="home_drawer">Home</string>
     <string name="install">Install</string>
@@ -232,9 +232,9 @@
     <string name="cancel_button">Cancel</string>
     <string name="login_button">Login</string>
     <string name="create_account_button">Create Account</string>
-    <string name="warning_alert_data" tools:ignore="StringFormatInvalid">Your allergies info will never be sent to the Open Food Facts server. Also, be careful that product data may not be accurate, and detection might not be 100% accurate, so please double-check by yourself! </string>
+    <string name="warning_alert_data" tools:ignore="StringFormatInvalid">Your allergies info will never be sent to the Open Food Facts server. Also, be careful that product data may not be accurate, and detection might not be 100% accurate, so please double-check by yourself!</string>
     <string name="title_info_dialog">How does it work?</string>
-    <string name="text_offline_info_dialog">Scan the products even when you are offline so as to add them to Open Food Facts later. The scanned products will appear here and you will be able to send them using the button below.</string>
+    <string name="text_offline_info_dialog">You can scan products when you\'re offline to add them to Open Food Facts later. All the products you scan will appear here, and you\'ll be able to send them using the button below.</string>
     <string name="permission_camera">Camera permission is needed to scan barcodes and take pictures.</string>
     <string name="no_camera_dialog_title">Camera not found</string>
     <string name="no_camera_dialog_content">Your device does not have a camera. You won\'t be able to scan any barcode.</string>
@@ -794,7 +794,7 @@
     <string name="brand_hint">Examples: Coca-Cola, Nestle, etc…</string>
     <string name="sign_in_or_register">Sign in or register</string>
     <string name="hunger_game_call_to_action">Help classify more %1$s</string>
-    <string name="txtHomeOnline">Open Food Facts is an open database of more than %1$s products (plus the ones you will contribute).</string>
+    <string name="txtHomeOnline">Open Food Facts is an open database of more than %1$s food products (plus the ones you will contribute).</string>
     <string name="enabled">Enabled</string>
     <!-- Application theme settings -->
     <string name="follow_system">Follow system</string>
@@ -805,11 +805,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">Get the Nutriscore</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

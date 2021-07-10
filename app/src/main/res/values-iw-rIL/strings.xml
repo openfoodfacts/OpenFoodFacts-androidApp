@@ -440,7 +440,7 @@
     <string name="dismiss">התעלמות</string>
     <string name="donation_url">https://donate.openfoodfacts.org</string>
     <!--Just replace "world" by "fr", "de"… translate the "terms-of-use" with the hyphens -->
-    <string name="terms_url">https://world.openfoodfacts.org/terms-of-use</string>
+    <string name="terms_url">https://world.openproductsfacts.org/terms-of-use</string>
     <!--Just replace "world" by "world-fr", "world-de"… do not translate "faq" -->
     <string name="faq_url">https://il.openfoodfacts.org/faq</string>
     <!--Just replace "world" by "world-fr", "world-de"… do not translate "hunger-game" -->
@@ -817,11 +817,14 @@
     <string name="changelog_translation_help">מעניין אותך לראות את יומן השינויים ב%s?\n מזמינים אותך להצטרף לצוות התרגום!</string>
     <string name="whats_new">מה חדש ב־Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">מזמינים אותך להצטרף למהפכת המזון</string>
-    <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
+    <string name="msg_welcome_intro">סורקים מזון, מצלמים תמונות ומסייעים בשינוי מערכת המזון</string>
     <string name="title_welcome_nutriscore">מה ה־Nutri-Score</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">הימנעות ממזון מעובד מאוד</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">שליחת ניתוח נתונים אלמוני</string>
+    <string name="msg_welcome_matomo">מזמינים אותך לסייע למתנדבי Open Food Facts לשפר את היישומון. בידיך נתונה ההחלטה אם לשלוח ניתוח התנהגות אלמוני.\n\nאם התחרטת על בחירתך ניתן להפעיל או לכבות את האפשרות הזאת בכל עת דרך ההגדרות.</string>
 </resources>

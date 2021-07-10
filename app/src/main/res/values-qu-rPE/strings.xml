@@ -187,7 +187,7 @@
     <string name="hintBarcode">Barcode</string>
     <string name="txtNutriScoreInfo">Learn more about the nutrient levels</string>
     <string name="txtloginHelper">If you have an Open Food Facts account, you can login here with it</string>
-    <string name="hintLogin">Username</string>
+    <string name="hintLogin">Login</string>
     <string name="hintPass">Password</string>
     <string name="errorLogin">Login or password error</string>
     <string name="errorWeb">We were not able to access the internet. Do you have connectivity issues?</string>
@@ -230,7 +230,7 @@
     <string name="select_camera">Select a Camera</string>
     <string name="ok_button">OK</string>
     <string name="cancel_button">Cancel</string>
-    <string name="login_button">Username</string>
+    <string name="login_button">Login</string>
     <string name="create_account_button">Create Account</string>
     <string name="warning_alert_data" tools:ignore="StringFormatInvalid">Your allergies info will never be sent to the Open Food Facts server. Also, be careful that product data may not be accurate, and detection might not be 100% accurate, so please double-check by yourself! </string>
     <string name="title_info_dialog">How does it work?</string>
@@ -457,7 +457,7 @@
     <string name="preference_analytics_bottom_sheet_grant_button">Grant</string>
     <string name="preference_analytics_bottom_sheet_decline_button">Decline</string>
     <string name="scan_first_string">Your viewed product history will be listed here.\nThis history is for your eyes only and is stored locally.</string>
-    <string name="log_in">Username</string>
+    <string name="log_in">Login</string>
     <string name="login_true">You are already logged in.</string>
     <string name="confirm_logout">Confirm Logout</string>
     <string name="logout_dialog_content">Are you sure to log out ?</string>
@@ -471,7 +471,7 @@
     <string name="additive_string">Additive</string>
     <string name="allergen_string">Allergen</string>
     <string name="search_string">Search</string>
-    <string name="country_string">Country</string>
+    <string name="country_string">Countries where sold</string>
     <string name="store_subtitle">Store</string>
     <string name="packaging_subtitle">Packaging</string>
     <string name="packaging_string">Packaging</string>
@@ -576,7 +576,7 @@
     <string name="no_internet_connection">You appear to have no internet connection, images will be uploaded when network is available</string>
     <string name="no_internet_unable_to_extract_ingredients">No internet connection. Unable to extract ingredients</string>
     <string name="percent">%1$d%%</string>
-    <string name="overview">Summary</string>
+    <string name="overview">Overview</string>
     <string name="ingredients">Ingredients</string>
     <string name="nutrition_facts">Nutrition Facts</string>
     <string name="your_version">Yours</string>
@@ -805,11 +805,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">Get the Nutriscore</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

@@ -515,7 +515,7 @@
     <string name="products_to_be_completed">Productes que s\'han de completar</string>
     <string name="offline_notification_title">Aportacions fora de línia que cal enviar</string>
     <string name="creator_history">Producte afegit el %1$s a les %2$s CET per %3$s</string>
-    <string name="last_editor_history">Darrera edició de la pàgina del producte el %1$s a %2$s CEST per %3$s</string>
+    <string name="last_editor_history">Darrera edició de la pàgina del producte el %1$s a %2$s CEST per </string>
     <string name="other_editors">La pàgina del producte també ha estat editada per </string>
     <string name="product_states">Product States</string>
     <string name="incomplete_states">Incomplete States</string>
@@ -664,7 +664,7 @@
     <!-- Used for additive exposure evaluation table -->
     <string name="extract_ingredients_prompt">Extreu els ingredients</string>
     <string name="extract_recycling_prompt">Extreu les instruccions de reciclatge</string>
-    <string name="add_nutrient_prompt_text">Add nutrition facts to compute the Nutri-Score</string>
+    <string name="add_nutrient_prompt_text">Afegiu informació nutricional per calcular el Nutri-Score</string>
     <string name="add_category_prompt_text">Add a category to help complete the product</string>
     <string name="add_nutrient_category_prompt_text">Add a category and nutrition facts to help complete the product</string>
     <string name="couldnot_compute_ecoscore_prompt_text">No hem pogut calcular una puntuació ecològica per a aquest producte. Pot ser que la categoria no sigui prou específica o que no tinguem dades de suport per a aquesta categoria. Si creieu que es tracta d’un error, podeu enviar-nos un correu fent clic a continuació.</string>
@@ -707,7 +707,7 @@
     <string name="empty"></string>
     <string name="add_product">Afegiu productes</string>
     <string name="add_another_product">Afegiu un altre producte</string>
-    <string name="add_nutrition_facts_for_nutriscore">Add nutrition facts to compute the Nutri-Score</string>
+    <string name="add_nutrition_facts_for_nutriscore">Afegiu informació nutricional per calcular el Nutri-Score</string>
     <string name="product_summary_action_compare_button_label">Comparar</string>
     <string name="product_summary_action_add_to_list_button_label">Afegeix a la llista</string>
     <string name="product_summary_action_edit_button_label">Edita</string>
@@ -805,11 +805,14 @@
     <string name="changelog_translation_help">Voleu veure aquest registre de canvis a %s?\nUniu-vos a l\'equip de traducció!</string>
     <string name="whats_new">Què hi ha de nou en Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">Obteniu el Nutri-Score</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>

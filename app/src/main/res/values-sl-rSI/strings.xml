@@ -223,7 +223,7 @@
     <string name="home_drawer">Domov</string>
     <string name="install">Namesti</string>
     <string name="open_beauty_drawer">Open Beauty Facts</string>
-    <string name="open_food_drawer">Odpri dejstva o hrani</string>
+    <string name="open_food_drawer">Open Food Facts</string>
     <string name="search_drawer">Iskanje</string>
     <string name="search_by_barcode_drawer">Vnesite črtno kodo</string>
     <string name="category_drawer">Kategorije</string>
@@ -553,7 +553,7 @@
     <string name="autofocus">Samodejno ostrenje</string>
     <string name="initial_loading">Začetno nalaganje</string>
     <string name="preferences">Nastavitve</string>
-    <string name="OFFlogo">Logotip odprta dejstva o hrani</string>
+    <string name="OFFlogo">Open Food Facts logo</string>
     <string name="loading_product">Loading product %s</string>
     <string name="image_not_defined_for_language">Za izbran jezik ni slike. Lahko jo dodate.</string>
     <string name="error_adding_ingredients">Nekaj je šlo narobe med poskusom dodajanja sestavin izdelka</string>
@@ -817,11 +817,14 @@
     <string name="changelog_translation_help">Want to see this changelog in %s?\nJoin the translation team!</string>
     <string name="whats_new">What\'s new with Open Food Facts?</string>
     <!-- New onboarding slides -->
-    <string name="title_welcome_ecoscore">Eco-Score</string>
     <string name="title_welcome_intro">Join the food revolution</string>
     <string name="msg_welcome_intro">Scan food, Take photos, Help transform the food system</string>
     <string name="title_welcome_nutriscore">Get the Nutriscore</string>
     <string name="msg_welcome_nutriscore">A simple synthesis of the nutritional quality of your food</string>
     <string name="title_welcome_nova">Avoid ultra-processed foods</string>
     <string name="msg_welcome_nova">Reduce the amount of ultra-processed foods in your diet.</string>
+    <string name="title_welcome_ecoscore">Eco-Score</string>
+    <string name="msg_welcome_ecoscore">A synthesis of the environmental impact of your food.</string>
+    <string name="title_welcome_matomo">Send anonymous analytics</string>
+    <string name="msg_welcome_matomo">Help the Open Food Facts volunteers to improve the app. You decide if you send anonymous analytics.\n\nIf you change your mind this option can be enabled and disabled at any time from the settings.</string>
 </resources>
